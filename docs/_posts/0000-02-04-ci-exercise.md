@@ -49,7 +49,7 @@ script:
 
 ```yaml
 language: node_js
-before_script: "cd exercises/javascript"
+before_install: "cd exercises/javascript"
 node_js:
   - 10
 ```
