@@ -298,20 +298,40 @@ How do you resolve them
 
 --
 
-## Recombining on the command line
+## Merging on the command line
 
-* Branch must be up to date with master
-    ```
-    git checkout feature-branch
-    git merge master
-    ```
-* or avoiding merge commits and keeping branch commits together
-    ```
-    git checkout feature-branch
-    git rebase master
+* **Merge** to make sure branch up to date with master:
+    ```sh
+    git checkout master         # switch to master
+    git pull                    # pull down changes
+    git checkout feature-branch # switch to fb
+    git merge master            # adds new commit
     ```
 * Merge branch (with merge commit unless rebased)
+    ```sh
+    git checkout master         # switch to master
+    git merge feature-branch    # adds new commit
     ```
-    git checkout master
-    git merge feature-branch
+
+--
+
+## Rebasing on the command line
+
+* **Rebase** to make sure branch up to date with master
+    ```sh
+    git checkout master         # switch to master
+    git pull                    # pull down changes
+    git checkout feature-branch # switch to fb
+    git rebase master           # rewinds and replays commits
     ```
+* Merge branch (with merge commit unless rebased)
+    ```sh
+    git checkout master         # switch to master
+    git merge feature-branch    # adds new commit
+    ```
+
+
++ Avoids adding a new commit to the feature branch
++ Keeps branch commits together
++ Only safe if you haven’t pushed commits
+    + Unless you force push your branch 😬⚠️🚨
