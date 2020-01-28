@@ -286,7 +286,7 @@ How do you resolve them
 + IDEs support this
     + Will offer to do so if you pull down changes using the IDE and conflict detected
     + Also possible to use the IDE conflict resolution if you `git pull` on the command line
-    + IntelliJ: VCM menu > Git > Resolve Conflicts…
+    + IntelliJ: VCS menu > Git > Resolve Conflicts…
 + Once each conflict resolved, need to tell git by ‘adding’ the file
 
 --
