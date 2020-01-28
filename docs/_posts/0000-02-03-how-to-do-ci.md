@@ -86,6 +86,14 @@ Note: GitHub Actions is the same, and you don’t even have to leave GitHub!
 
 --
 
+## Build status
+
+Status appears against each commit and PR.
+
+<img src=images/travis-build-status.png>
+
+--
+
 ## Configuring Travis
 
 * Contents of `.travis.yml` tells Travis what to do
