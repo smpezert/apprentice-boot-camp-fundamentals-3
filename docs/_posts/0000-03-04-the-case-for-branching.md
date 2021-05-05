@@ -261,11 +261,11 @@ Explain the merge view, our changes on the left, base version in the middle, oth
 ## Conflicts
 
 ```
-<<<<<<< HEAD:file.txt
-Conflicts
-=======
-What conflicts?
->>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
+ <<<<<<< HEAD:file.txt
+ Conflicts
+ =======
+ What conflicts?
+ >>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
 ```
 
 + Must be resolved manually
@@ -300,3 +300,61 @@ How do you resolve them
     + Yours
 + Apply non-conflicting changes
 + Look at other changes and attempt to combine both sides without losing anything
+
+--
+
+## Recombining branches
+
++ Use a Pull Request
++ Merge or rebase on the command line and push
+
+--
+
+## Pull Requests
+
++ What is a Pull Request?
++ Request via collaboration tool to either merge or rebase one branch into another
++ Two branches might be in different repositories (across forks)
++ GitHub provides shortcut for recently pushed branches
++ GitHub guesses which branches you want to compare for the PR
++ Good practice to delete branch once PR is merged
+
+--
+
+## Merging on the command line
+
+* **Merge** to make sure branch up to date with master:
+    ```sh
+    git checkout master         # switch to master
+    git pull                    # pull down changes
+    git checkout feature-branch # switch to fb
+    git merge master            # adds new commit
+    ```
+* Merge branch (with merge commit unless rebased)
+    ```sh
+    git checkout master         # switch to master
+    git merge feature-branch    # adds new commit
+    ```
+
+--
+
+## Rebasing on the command line
+
+* **Rebase** to make sure branch up to date with master
+    ```sh
+    git checkout master         # switch to master
+    git pull                    # pull down changes
+    git checkout feature-branch # switch to fb
+    git rebase master           # rewinds and replays commits
+    ```
+* Merge branch (with merge commit unless rebased)
+    ```sh
+    git checkout master         # switch to master
+    git merge feature-branch    # adds new commit
+    ```
+
+
++ Avoids adding a new commit to the feature branch
++ Keeps branch commits together
++ Only safe if you haven’t pushed commits
+    + Unless you force push your branch 😬⚠️🚨
