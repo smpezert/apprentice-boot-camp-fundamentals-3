@@ -80,6 +80,12 @@ Note: Reminder: opinion follows
 
 Taken from [Feature Toggles (aka Feature Flags)](https://martinfowler.com/articles/feature-toggles.html)
 
+---
+
+## Practical example
+
+Review `FeatureToggleExampleTest` which explores feature toggles and Bowling Kata.
+
 --
 
 ## Disadvantages

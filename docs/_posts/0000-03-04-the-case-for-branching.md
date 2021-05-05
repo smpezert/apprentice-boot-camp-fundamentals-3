@@ -207,7 +207,7 @@ And sometimes it's hard
 --
 
 
-### Different kinds of merge
+## Different kinds of merge
 
 + Simple
     + Different files
@@ -220,7 +220,7 @@ Whiteboard what might be simple and complex merges with the group
 
 --
 
-### Diverging branches
+## Diverging branches
 
 <img src="images/diverging_branches.svg">
 
@@ -235,7 +235,7 @@ Like straddling two diverging canoes.
 
 --
 
-### A simple merge
+## A simple merge
 
 <img src="images/green_merge.png">
 
@@ -248,7 +248,7 @@ correct.
 --
 
 
-### A complicated merge
+## A complicated merge
 
 <img src="images/merge_hell.png">
 
@@ -258,14 +258,14 @@ Explain the merge view, our changes on the left, base version in the middle, oth
 
 --
 
-### Conflicts
+## Conflicts
 
 ```
-<<<<<<< HEAD:file.txt
-Conflicts
-=======
-What conflicts?
->>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
+ <<<<<<< HEAD:file.txt
+ Conflicts
+ =======
+ What conflicts?
+ >>>>>>> 77976da35a11db4580b80ae27e8d65caf5208086:file.txt
 ```
 
 + Must be resolved manually
@@ -277,6 +277,29 @@ What are they
 What do they look like  
 What is the effect  
 How do you resolve them  
+
+--
+
+## Conflict resolution
+
++ Easiest to use a powerful tool
++ IDEs support this
+    + Will offer to do so if you pull down changes using the IDE and conflict detected
+    + Also possible to use the IDE conflict resolution if you `git pull` on the command line
+    + IntelliJ: VCS menu > Git > Resolve Conflicts…
++ Once each conflict resolved, need to tell git by ‘adding’ the file
+
+--
+
+## Resolving conflicts in the IDE
+
++ If you know you can throw one away, do so
++ Otherwise enter the editor and it’s three columns
+    + Theirs
+    + Current
+    + Yours
++ Apply non-conflicting changes
++ Look at other changes and attempt to combine both sides without losing anything
 
 --
 

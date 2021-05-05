@@ -1,3 +1,14 @@
+## Exercise prep: add a collaborator
+
+* You are going to work in pairs
+* Both need to push to the same repository
+* Need to add the other person as a collaborator
+    * Click Settings in your forked repository on GitHub
+    * Choose ‘Collaborators & teams’
+    * Add your partner
+
+--
+
 ## Exercise: Make changes on branches
 
 * Work in pairs, ___***SHARE THE SAME GIT REPOSITORY***___
@@ -5,10 +16,9 @@
   * `git checkout -b branch_to_create`
 * One person implements Story 2
 * One person implements Story 3
-* Add to your TaxCalculator implementation with regular commits
+* Both add to your TaxCalculator implementation with regular commits
 * Merge branches back to master one by one
 * Check Travis after each push
-
 
 Notes:
 See branch ```petrol_tax``` for a starting point to this exercise if they haven't completed the previous one.  
