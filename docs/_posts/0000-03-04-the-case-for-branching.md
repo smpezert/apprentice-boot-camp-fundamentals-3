@@ -277,3 +277,26 @@ What are they
 What do they look like  
 What is the effect  
 How do you resolve them  
+
+--
+
+## Conflict resolution
+
++ Easiest to use a powerful tool
++ IDEs support this
+    + Will offer to do so if you pull down changes using the IDE and conflict detected
+    + Also possible to use the IDE conflict resolution if you `git pull` on the command line
+    + IntelliJ: VCS menu > Git > Resolve Conflicts…
++ Once each conflict resolved, need to tell git by ‘adding’ the file
+
+--
+
+## Resolving conflicts in the IDE
+
++ If you know you can throw one away, do so
++ Otherwise enter the editor and it’s three columns
+    + Theirs
+    + Current
+    + Yours
++ Apply non-conflicting changes
++ Look at other changes and attempt to combine both sides without losing anything
