@@ -2,10 +2,20 @@
 
 * You are going to work in pairs
 * Both need to push to the same repository
-* Need to add the other person as a collaborator
+* ___***ONE***___ of you needs to add the other person as a collaborator:
     * Click Settings in your forked repository on GitHub
     * Choose ‘Manage Access’
     * Add your partner
+
+--
+
+## Exercise prep: change your remote
+
+* The ___***OTHER***___ person needs to point their local tax_calculator repository to your fork
+
+```
+git remote set-url origin https://github.com/[USER]/tax_calculator.git
+```
 
 --
 
