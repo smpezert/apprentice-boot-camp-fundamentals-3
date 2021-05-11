@@ -4,7 +4,7 @@
 * Both need to push to the same repository
 * Need to add the other person as a collaborator
     * Click Settings in your forked repository on GitHub
-    * Choose ‘Collaborators & teams’
+    * Choose ‘Manage Access’
     * Add your partner
 
 --
@@ -13,10 +13,11 @@
 
 * Work in pairs, ___***SHARE THE SAME GIT REPOSITORY***___
 * Create two branches based on the same start point
-  * `git checkout -b branch_to_create`
+  * `git checkout -b story_2`
+  * `git checkout -b story_3`
 * One person implements Story 2
 * One person implements Story 3
-* Both add to your TaxCalculator implementation with regular commits
+* Both add to your TaxCalculator implementation with regular commits, ___***BOTH CHANGE THE SAME FILE***___
 * Merge branches back to master one by one
 * Check Travis after each push
 
