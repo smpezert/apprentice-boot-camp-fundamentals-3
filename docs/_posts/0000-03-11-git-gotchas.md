@@ -128,7 +128,8 @@ git push --set-upstream <remote> <branch>
 
 ## Exercise
 
-+ Create new branch locally: 
++ Create new local branch of this repository:
+  `apprentice-boot-camp-fundamentals-3` 
     ```
     git checkout -b tracking-test
     ```
