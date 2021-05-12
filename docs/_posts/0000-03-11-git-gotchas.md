@@ -1,31 +1,180 @@
-## Git is hard
+## Understanding some of the terms
 
-We all get stuck from time to time
-
---
-
-<background>https://i.pinimg.com/originals/bf/c6/3a/bfc63af24e16b3d8103ddae2e60085c5.gif</background>
++ Git’s lingo is confusing
++ Shout out git words that we know…
++ We’ll explain some of the terms to help
 
 --
 
-## Sometimes it is easier to start again
+## Commit
 
-Notes: Important to balance learning and progress
++ What is a commit in git?
+  + Identifier (commit hash)
+  + Some content
+  + Message (how content changed)
+  + References to parent commit(s)
+  + Author
+  + Authoring date (when originally committed)
+  + Commit date (might be altered if commit changes)
++ When would a commit have two parents?
+
+--
+
+## Commit hash
+
++ Identifier for a single commit
++ Hex value representing an SHA-1 checksum of your commit
+  + Hash of the above fields, including a hash of all the content
++ Often abbreviated: `a18d33c810d99b142d1e71cc46eab80231a5b462` becomes `a18d33c`
++ What is the commit hash of the last commit to our repo?
+  + `git log`
+
+--
+
+## Stage (verb)
+
++ Stage files by using `git add`
++ Indicates the contents of the next commit
+
+--
+
+## HEAD
+
++ `HEAD` is a pointer to the commit at the tip of your current branch
+  + What is `HEAD~1`?
+  + What is `HEAD~2`?
+
+--
+
+## Working copy
+
++ A copy of the repository
++ Contains much (if not all) of the history of the repository
++ What is the difference between working copy and repository?
+
+--
+
+## Remote
+
++ A reference to a remote working copy
++ Might be a repo on github.com
++ Might be somewhere else
++ Remotes have names and addresses
+  + What is origin?
+  + What other remote names do we know?
+
+--
+
+## Fork (verb)
+
++ This is not a git term
++ When someone creates a linked working copy of a repo
++ A fork (noun) refers to the linked working copy 
+
+--
+
+## Clone
+
++ This is a git term!
++ How does cloning differ from forking? 
+  + Creates an **unlinked** working copy from a remote
+  + The new working copy is **local**
+
+--
+
+## Checkout
+
++ Switch current branch
++ Not to be confused with Subversion’s checkout command which fetches changes
++ Can create new branch in the process using `-b`
+  ```
+  git checkout master
+  git checkout -b new-branch
+  ```
+
+--
+
+## Fetch vs Pull
+
++ Fetch retrieves but does not apply changes (from a remote)
++ Pull fetches AND merges by default
+  + With `--rebase` it rebases instead of merging
+
+## Quick quiz
+
+--
+
+## What is HEAD?
+
+- A remote
+- A branch
+- A commit
+- A tag
+- A toilet
+
+Note: (A reference to) a commit
+
+--
+
+## What git command creates a branch?
+
+- `branch`
+- `checkout`
+- `fork`
+
+Note: `checkout (-b)`
+
+--
+
+## What hash function does a commit hash use?
+
+- MD5
+- SHA-1
+- SHA-256
+- Modulus 11
+
+Note: SHA-1
+
+--
+
+## What does **not** go into the hash?
+
+- Commit message
+- Your code
+- Remote address
+- Your name
+- Your email address
+- Parent commit
+- Soap
+
+Note: remote address
+
+---
+
+## Using Git is hard
+
++ It is hard to know how to fix things
++ We *all* get stuck from time to time
++ Useful resources can help you when you are stuck
++ Good to practice some of the techniques
+
+---
+
+## Fixing mistakes
 
 --
 
 ## [Git Pretty](http://justinhileman.info/article/git-pretty/)
+
 <img src=http://justinhileman.info/article/git-pretty/git-pretty.png>  <!-- .element width="50%" -->
 
 --
 
-## Warning… incoming sweariness
-
---
-
-## [Oh Shit, Git!?!](https://ohshitgit.com/)
+## [Dangit, Git!?!](https://dangitgit.com/)
 
 Written site with more detailed instructions about how to resolve problems
+
+<img src=images/dangitgit.png>  <!-- .element width="50%" -->
 
 --
 
@@ -35,43 +184,67 @@ Super long word documentation with lots of explanation about how to undo stuff
 
 --
 
-## Commit hash
+<background>https://i.pinimg.com/originals/bf/c6/3a/bfc63af24e16b3d8103ddae2e60085c5.gif</background>
+<backgroundimageopacity>0.5</backgroundimageopacity>
 
-+ Describes a commit
-+ Hex value representing a checksum of your content
-+ Often abbreviated: `a18d33c810d99b142d1e71cc46eab80231a5b462` becomes `a18d33c`
+## All that said… 
 
---
+Sometimes it is easier to start again
 
-## HEAD
+`rm -rf apprentice-boot-camp-fundamentals-3`  
+`git clone https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3.git`
 
-Head is a pointer to the tip of your current branch
-
-`HEAD~1`, `HEAD~2`
+Notes: It can be slower to fix it properly, but it can be an opportunity to learn too—balance learning and progress
 
 --
 
-## Fetch vs Pull
+## Scenario
 
-+ Fetch retrieves but does not apply remote changes
-+ Pull fetches AND merges by default
-    + With `--rebase` it rebases instead of merging
++ Your tests are failing
++ When you committed the tests were passing
++ You’ve no idea how to get them working
++ You committed quite a long time ago
++ What does ‘[git pretty](http://justinhileman.info/article/git-pretty/)’ say you should do?
+  + `git reset --hard`
 
 --
 
 ## Reset
 
-Throw away local changes
-
-```
-git reset --hard
-git reset --hard HEAD~1
-```
++ Takes a commit, but this defaults to current HEAD
++ Changes the value of HEAD to specified commit and unstages files
+  ```
+  git reset
+  ```
++ Can throw away local changes too, if we tell it to
+  ```
+  git reset --hard
+  git reset --hard HEAD~1
+  ```
 
 --
 
-## Amend your last commit message
+## Scenario
 
++ You just committed (yay)
++ You forgot to update the message (boo)
++ You realised before you pushed your changes (yay)
++ What does ‘[git pretty](http://justinhileman.info/article/git-pretty/)’ say you should do?
+  + `git commit --amend`
++ What if we forgot to add a new file?
+  + `git add {file}`
+  + `git commit --amend`
+
+--
+
+## Amend your last commit
+
++ Amend changes (replaces) the last commit
++ Why is it replacing the last commit?
+  + Commits are immutable
++ The previous commit is not actually removed
++ What happens to `HEAD`?
++ Most often used to change the message
 ```
 git commit --amend -m "Add new message here"
 ```
@@ -80,6 +253,9 @@ git commit --amend -m "Add new message here"
 
 ## Add to your last commit
 
++ Staging files before amending allows you to change the contents
++ You don’t have to change the message
+
 ```
 git add .
 git commit --amend --no-edit
@@ -87,19 +263,104 @@ git commit --amend --no-edit
 
 --
 
+## Quick quiz
+
+--
+
+## What git command changes the last commit message?
+
+- `checkout`
+- `apply`
+- `log`
+- `amend`
+- `add`
+- `yolo`
+
+Note: amend  
+
+---
+
+## Fixing more mistakes
+
+--
+
+## Scenario
+
++ You pushed some changes
++ One of your changes caused tests to fail in the pipeline
++ You aren’t convinced you can quickly fix the test
++ You want to reverse what you did
++ What does ‘[git pretty](http://justinhileman.info/article/git-pretty/)’ say you should do?
+  + `git revert {commit-hash}`
+
+--
+
 ## Revert
 
-Creates a new commit which negates a previous commit
-
++ Creates a new commit which negates a previous commit
 ```
 git revert a18d33c
+git revert HEAD~1
 ```
++ Old commit is still there in the history
++ You can always revert your revert
+
+--
+
+## Scenario
+
++ Your team uses branches and pull requests for code reviews
++ You made a change and committed it (yay)
++ You forgot to create a branch first (boo)
++ What does ‘[Dangit, Git!?!](https://dangitgit.com/)’ say you should do?
+  ```
+  git branch some-new-branch-name
+  git reset HEAD~ --hard
+  git checkout some-new-branch-name
+  ```
+
+--
+
+## Scenario
+
++ You made a change and committed it
++ You forgot that yesterday you were working on a branch, and you didn’t switch to master before making your change
++ You want to move your changes to master
++ What does ‘[Dangit, Git!?!](https://dangitgit.com/)’ say you should do?
+  ```
+  git reset HEAD~ --soft
+  git stash
+  git checkout master
+  git stash pop
+  git add .
+  git commit -m "New message"
+  ```
+
+Note: That’s complicated, so let’s go through it  
+
+--
+
+## What does reset do?
+
+--
+
+## Stashing your work
+
++ A bit like sticking stuff on the clipboard, like scratch commits
++ But… stashes go on a stack (FILO)
++ Push and pop things from the stack of stashes
+  ```
+  git stash
+  git stash push -m "Some useful name"
+  git stash list
+  git stash pop
+  ```
 
 --
 
 ## Move changes to correct branch
 
-In case you are forgetful, and commit changes to master when your team uses branches.
+For when you are forgetful, and commit changes to master when your team uses branches.
 
 ```
 # undo the last commit, but leave the changes available
@@ -115,21 +376,56 @@ git commit -m "your message here";
 
 --
 
+## Scenario
+
++ You started a new branch, made some changes, and want to push it
++ You run `git push` and you get:
+  ```
+  fatal: The current branch dummy-branch has no upstream branch.
+  To push the current branch and set the remote as upstream, use
+  git push --set-upstream origin dummy-branch
+  ```
++ What do you need to do?
+  + Read the error message!
+
+--
+
 ## Tracking remote branches
 
-When you create a branch locally, you need to say where to push it to:
++ New local branches don’t automatically track remote branches
++ Possible to have a working copy with branches from multiple remotes
+  ```
+  git push -u <remote> <branch>
+  git push --set-upstream <remote> <branch>
+  ```
 
-```
-git push -u <remote> <branch>
-git push --set-upstream <remote> <branch>
-```
+--
+
+## Quick quiz
+
+--
+
+## What is a stash?
+
+- A commit that doesn’t belong to a branch
+- Saved changes that don’t belong to a commit
+- Contents which will belong to the next commit
+- Something that is best cut away before anyone sees
+
+--
+
+## How do you track a remote branch?
+
+- `git set-upstream <remote> <branch>`
+- `git push --set-upstream <remote> <branch>`
+- `git push --u <remote> <branch>`
+- `git push <remote> <branch>`
 
 --
 
 ## Exercise
 
-+ Create new local branch of this repository:
-  `apprentice-boot-camp-fundamentals-3` 
++ Create new branch locally: 
     ```
     git checkout -b tracking-test
     ```
@@ -147,7 +443,7 @@ git push --set-upstream <remote> <branch>
     ```
 + Check tracking branches again
 
---
+---
 
 ## Rebase vs Merge
 
@@ -221,6 +517,45 @@ git push --set-upstream <remote> <branch>
 
 --
 
-## [Git-it](https://github.com/jlord/git-it-electron)
+## Quick quiz
 
-Desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the command line.
+--
+
+## What does rebase do?
+
+- Places incoming commits after your commits
+- Fetches changes and merges them in
+- Moves your commits to a new branch
+- Places your commits after incoming commits
+- Makes you unpopular
+
+--
+
+## When is it safe to force push?
+
+- When your GitHub admins have permitted it
+- When master is protected
+- When no one else has a copy of the history
+- When no one else has made any changes
+
+Note: When no one else has a copy of the history
+
+--
+
+## Which statements about merge are true?
+
+- Merge commits have a parent commit
+- Merge will make you unpopular
+- Merge changes the history
+- Merging two branches results in one less branch
+- Merge always creates a new commit
+- Merge is one of the Bouviers
+
+Note: will make you unpopular and always creates a new commit
+
+---
+
+## You want more git?!
+
++ [Git-it](https://github.com/jlord/git-it-electron)
+  Desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the command line.
