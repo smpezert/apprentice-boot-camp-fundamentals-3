@@ -292,6 +292,38 @@ Note: git revert --hard
 
 ---
 
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git reset
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\reset`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+* Using [docs](https://git-scm.com/docs/git-reset), try to do these steps in order with single commands:
+  1. Move HEAD to commit ‘9’, leaving file ‘`10.txt`’ being staged for commit
+  1. Move to commit ‘8’, leaving files ‘`9.txt`’ and ‘`10.txt`’ being untracked
+  1. Move to commit ‘7’, leaving ***only*** files ‘`9.txt`’ and ‘`10.txt`’ being untracked
+  1. Create a commit which reverses commit ‘6’
+1. Hint: `git status` and `git log --oneline` to check progress
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git commit --amend
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\amend`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+* Using [docs](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend), try to do these steps in order with single commands:
+  1. Examine the most recent commit using ‘`git log -p`’
+  1. Amend the commit to include file ‘`bar.txt`’ without changing the message (two commands)
+  1. Examine the most recent commit using ‘`git log -p`’
+  1. Change the previous message
+1. Hint: `git status` and `git log --oneline` to check progress
+
+--
+
 ## Fixing more mistakes
 
 --
