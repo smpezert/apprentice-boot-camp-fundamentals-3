@@ -303,7 +303,8 @@ Note: git revert --hard
   1. Move HEAD to commit ‘9’, leaving file ‘`10.txt`’ being staged for commit
   1. Move to commit ‘8’, leaving files ‘`9.txt`’ and ‘`10.txt`’ being untracked
   1. Move to commit ‘7’, leaving ***only*** files ‘`9.txt`’ and ‘`10.txt`’ being untracked
-1. Hint: `git status` and `git log --oneline` to check progress
+
+Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 --
 
@@ -319,7 +320,8 @@ Note: git revert --hard
   1. Amend the commit to include file ‘`bar.txt`’ without changing the message (two commands)
   1. Examine the most recent commit using ‘`git log -p`’
   1. Change the previous message
-1. Hint: `git status` and `git log --oneline` to check progress
+
+Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 --
 
@@ -476,7 +478,24 @@ git commit -m "your message here";
 * Using [docs](https://git-scm.com/docs/git-revert), try to do these steps in order with single commands:
   1. Create a new commit which reverses the last commit
   1. Create a new commit which reverses the commit which added credentials
-1. Hint: ‘`cat greeting.txt`’, ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git stash
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\basic-stashing`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+1. Using [docs](https://git-scm.com/docs/git-stash), try to do these steps in order with single commands:
+  1. Stash the work in progress (a mixture of staged/unstaged changes)
+  1. Fix typos in bug.txt and commit (two steps)
+  1. Restore stashed changes without removing from the stack, resulting in a mixture of staged/unstaged changes again
+
+Hint: use ‘`cat greeting.txt`’, ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 --
 
