@@ -1,4 +1,4 @@
-## Understanding some of the terms
+## Understanding some Git terms
 
 + Git’s lingo is confusing
 + Shout out git words that we know…
@@ -277,6 +277,18 @@ git commit --amend --no-edit
 - `yolo`
 
 Note: amend  
+
+---
+
+## How would you use git to restore changed tracked files to their last committed state
+
+- `git revert`
+- `git revert --soft`
+- `git reset --hard`
+- `git reset --hard HEAD~1`
+- `rm -rf`
+
+Note: git revert --hard  
 
 ---
 
