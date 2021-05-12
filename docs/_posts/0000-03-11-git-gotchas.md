@@ -303,7 +303,6 @@ Note: git revert --hard
   1. Move HEAD to commit ‘9’, leaving file ‘`10.txt`’ being staged for commit
   1. Move to commit ‘8’, leaving files ‘`9.txt`’ and ‘`10.txt`’ being untracked
   1. Move to commit ‘7’, leaving ***only*** files ‘`9.txt`’ and ‘`10.txt`’ being untracked
-  1. Create a commit which reverses commit ‘6’
 1. Hint: `git status` and `git log --oneline` to check progress
 
 --
@@ -464,6 +463,20 @@ git commit -m "your message here";
 - `git push --set-upstream <remote> <branch>`
 - `git push --u <remote> <branch>`
 - `git push <remote> <branch>`
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git revert
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\basic-revert`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+* Using [docs](https://git-scm.com/docs/git-revert), try to do these steps in order with single commands:
+  1. Create a new commit which reverses the last commit
+  1. Create a new commit which reverses the commit which added credentials
+1. Hint: ‘`cat greeting.txt`’, ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 --
 
