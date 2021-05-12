@@ -104,6 +104,10 @@ The code for the exercises in this boot camp is currently in the [tax_calculator
 * Help resolve language specific issues
 * Coach them towards finding their own solutions rather than fixing things for them
 
+# Git kata exercises
+
+The git exercises are included as a git subtree from https://github.com/eficode-academy/git-katas.git. **It is best not to update them** unless you are familiar with maintaining changes to subtrees. To fetch changes from the origin, run `git subtree pull --prefix exercises/git https://github.com/eficode-academy/git-katas.git master --squash`.
+
 # Working with the slides
 
 The slides are stored as Markdown files in `docs/_posts` and are presented using a combination of Jekyll and [reveal.js](https://revealjs.com/#/). A [remote Jekyll theme](https://github.com/autotraderuk/jekyll-revealjs) is used to help make changes to the Jekyll code centrally.
