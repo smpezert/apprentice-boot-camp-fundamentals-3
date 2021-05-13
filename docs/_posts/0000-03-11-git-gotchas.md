@@ -263,6 +263,47 @@ git commit --amend --no-edit
 
 --
 
+<!-- .slide: style="font-size: 80%" -->
+
+## Detached HEAD 🤯
+
+```
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+```
+
+--
+
+## Reattaching your HEAD 💆🏻
+
++ `git checkout` usually used to switch branches
++ Also accepts commit hashes
+  + `HEAD` no longer points to the tip of a branch
++ Why might you checkout a commit?
+  + Look at some code
+  + Try running the tests
+  + Create a branch from a historical commit
++ Reattach `HEAD` by checking out your branch again
+  ```
+  git checkout master
+  git checkout my-branch
+  ```
+
+--
+
 ## Quick quiz
 
 --
@@ -291,6 +332,71 @@ Note: amend
 Note: git revert --hard  
 
 ---
+
+## How do you get out of detached head mode?
+
+- Following the advice in your terminal
+- `git reset --hard`
+- `git checkout`
+- `git checkout master`
+- `git reset --hard HEAD`
+- `git branch bug-fix`
+- `git staple neck`
+
+Note: git revert --hard  
+
+---
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git reset
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\reset`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+* Using [docs](https://git-scm.com/docs/git-reset), try to do these steps in order with single commands:
+  1. Move HEAD to commit ‘9’, leaving file ‘`10.txt`’ being staged for commit
+  1. Move to commit ‘8’, leaving files ‘`9.txt`’ and ‘`10.txt`’ being untracked
+  1. Move to commit ‘7’, leaving ***only*** files ‘`9.txt`’ and ‘`10.txt`’ being untracked
+
+Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git commit --amend
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\amend`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+* Using [docs](https://git-scm.com/docs/git-commit#Documentation/git-commit.txt---amend), try to do these steps in order with single commands:
+  1. Examine the most recent commit using ‘`git log -p`’
+  1. Amend the commit to include file ‘`bar.txt`’ without changing the message (two commands)
+  1. Examine the most recent commit using ‘`git log -p`’
+  1. Change the previous message
+
+Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: detached head
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\detached-head`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+1. Read the message you got, then try to do these steps in order with single commands:
+  1. Reattach HEAD to the tip of the master branch
+  1. Detach the HEAD from the branch and look at commit ‘B’
+  1. Create a new branch called ‘`mirror`’ and switch to it
+  1. Create a file called mirrorfile
+  1. Commit to the new branch
+
+Hint: use ‘`git status`’ and ‘`git log --oneline --graph --all`’ to investigate
+
+--
 
 ## Fixing more mistakes
 
@@ -432,6 +538,37 @@ git commit -m "your message here";
 - `git push --set-upstream <remote> <branch>`
 - `git push --u <remote> <branch>`
 - `git push <remote> <branch>`
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git revert
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\basic-revert`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+* Using [docs](https://git-scm.com/docs/git-revert), try to do these steps in order with single commands:
+  1. Create a new commit which reverses the last commit
+  1. Create a new commit which reverses the commit which added credentials
+
+Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: git stash
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\basic-stashing`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+1. Using [docs](https://git-scm.com/docs/git-stash), try to do these steps in order with single commands:
+  1. Stash the work in progress (a mixture of staged/unstaged changes)
+  1. Fix typos in bug.txt and commit (two steps)
+  1. Restore stashed changes without removing from the stack, resulting in a mixture of staged/unstaged changes again
+
+Hint: use ‘`cat greeting.txt`’, ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 --
 
