@@ -319,7 +319,7 @@ Turn off this advice by setting config variable advice.detachedHead to false
 
 Note: amend  
 
----
+--
 
 ## How would you use git to restore changed tracked files to their last committed state
 
@@ -331,7 +331,7 @@ Note: amend
 
 Note: git revert --hard  
 
----
+--
 
 ## How do you get out of detached head mode?
 
