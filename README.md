@@ -43,6 +43,13 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
 ## Further reading / learning resources
 
 <!--- For end of boot camp: Signposting for apprentices self study, further learning, online resources, practice etc. --->
+* [Git-it](https://github.com/jlord/git-it-electron)
+  Desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the command line.
+* [git-katas](https://github.com/eficode-academy/git-katas/) has a bunch of exercises that we’ve dipped into in this boot camp to practice git learning
+* [Git Pretty](http://justinhileman.info/article/git-pretty/) is a flow chart that helps you fix git messes
+* [Dangit, Git!?!](https://dangitgit.com/) is a written site with more detailed instructions about how to resolve problems
+* This [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/undoing-changes) is also a useful resource on undoing changes
+* [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) has some great animations which help bring git commands to life by visualising what is happening
 
 ### CI/CD
 
