@@ -263,6 +263,47 @@ git commit --amend --no-edit
 
 --
 
+<!-- .slide: style="font-size: 80%" -->
+
+## Detached HEAD 🤯
+
+```
+You are in 'detached HEAD' state. You can look around, make experimental
+changes and commit them, and you can discard any commits you make in this
+state without impacting any branches by switching back to a branch.
+
+If you want to create a new branch to retain commits you create, you may
+do so (now or later) by using -c with the switch command. Example:
+
+  git switch -c <new-branch-name>
+
+Or undo this operation with:
+
+  git switch -
+
+Turn off this advice by setting config variable advice.detachedHead to false
+
+```
+
+--
+
+## Reattaching your HEAD 💆🏻
+
++ `git checkout` usually used to switch branches
++ Also accepts commit hashes
+  + `HEAD` no longer points to the tip of a branch
++ Why might you checkout a commit?
+  + Look at some code
+  + Try running the tests
+  + Create a branch from a historical commit
++ Reattach `HEAD` by checking out your branch again
+  ```
+  git checkout master
+  git checkout my-branch
+  ```
+
+--
+
 ## Quick quiz
 
 --
@@ -287,6 +328,20 @@ Note: amend
 - `git reset --hard`
 - `git reset --hard HEAD~1`
 - `rm -rf`
+
+Note: git revert --hard  
+
+---
+
+## How do you get out of detached head mode?
+
+- Following the advice in your terminal
+- `git reset --hard`
+- `git checkout`
+- `git checkout master`
+- `git reset --hard HEAD`
+- `git branch bug-fix`
+- `git staple neck`
 
 Note: git revert --hard  
 
@@ -322,6 +377,24 @@ Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
   1. Change the previous message
 
 Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+--
+
+<!-- .slide: style="font-size: 80%" -->
+
+## Exercise: detached head
+
+1. In Terminal / Powershell, run ‘`cd exercises\git\detached-head`’
+1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
+1. Read the message you got, then try to do these steps in order with single commands:
+  1. Reattach HEAD to the tip of the master branch
+  1. Detach the HEAD from the branch and look at commit ‘B’
+  1. Create a new branch called ‘`mirror`’ and switch to it
+  1. Create a file called mirrorfile
+  1. Commit to the new branch
+
+Hint: use ‘`git status`’ and ‘`git log --oneline --graph --all`’ to investigate
 
 --
 
