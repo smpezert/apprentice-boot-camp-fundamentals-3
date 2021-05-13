@@ -697,7 +697,7 @@ Note: When no one else has a copy of the history
 - Merge commits have a parent commit
 - Merge will make you unpopular
 - Merge changes the history
-- Merging two branches results in one less branch
+- Merging two branches results in one fewer branches
 - Merge always creates a new commit
 - Merge is one of the Bouviers
 
