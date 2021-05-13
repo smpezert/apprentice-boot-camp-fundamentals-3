@@ -396,7 +396,7 @@ Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 Hint: use ‘`git status`’ and ‘`git log --oneline --graph --all`’ to investigate
 
---
+---
 
 ## Fixing more mistakes
 
