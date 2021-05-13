@@ -151,16 +151,16 @@ Note: remote address
 
 ---
 
+## Fixing mistakes
+
+--
+
 ## Using Git is hard
 
 + It is hard to know how to fix things
 + We *all* get stuck from time to time
 + Useful resources can help you when you are stuck
 + Good to practice some of the techniques
-
----
-
-## Fixing mistakes
 
 --
 
