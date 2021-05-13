@@ -539,7 +539,7 @@ git commit -m "your message here";
 - `git push --u <remote> <branch>`
 - `git push <remote> <branch>`
 
---
+---
 
 <!-- .slide: style="font-size: 80%" -->
 
