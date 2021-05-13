@@ -144,18 +144,6 @@ Allegedly he has attempted to clean up his act since
 
 --
 
-## A prophecy...
-
-<iframe src="https://player.vimeo.com/video/60788996" width="640" height="360" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
-<p><a href="https://vimeo.com/60788996">GIT IS HARD</a> from <a href="https://vimeo.com/owltastic">Meagan Fisher</a> on <a href="https://vimeo.com">Vimeo</a>.</p>
-
-Note:
-This video probably needs a bit of context setting - it's a developer having some issues with git which perplexes the whole team.
-This situation is not uncommon ;-)
-We're going to do some exercises involving branching, git is a very powerful tool, it's possible to get things VERY wrong.
-
---
-
 <img style="border:0;box-shadow:none;background-color:transparent" src="images/aliens.png">
 
 Note:
