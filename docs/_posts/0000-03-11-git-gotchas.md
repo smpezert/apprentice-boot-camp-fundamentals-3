@@ -329,7 +329,7 @@ Note: amend
 - `git reset --hard HEAD~1`
 - `rm -rf`
 
-Note: git revert --hard  
+Note: git reset --hard  
 
 --
 
