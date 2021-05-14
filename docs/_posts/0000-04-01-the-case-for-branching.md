@@ -160,11 +160,10 @@ Branches can easily get out of control, they should be few in number and short-l
 
 ### Git guidelines
 
-+ Use a small set of commands:
-    + clone
-    + commit
-    + push
-    + pull
++ Mostly use a small set of commands:
+  + clone, add, commit, log, push, pull
++ Sprinkle in some others
+  + checkout, rebase, merge, reset
 + Use a consistent workflow
 + Branches should be short-lived
 + The number of branches should be small

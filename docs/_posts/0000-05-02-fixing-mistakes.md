@@ -108,7 +108,6 @@ git commit --amend -m "Add new message here"
 
 + Staging files before amending allows you to change the contents
 + You don’t have to change the message
-
 ```
 git add .
 git commit --amend --no-edit
