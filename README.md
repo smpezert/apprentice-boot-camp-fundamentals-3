@@ -42,15 +42,6 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
 
 ## Further reading / learning resources
 
-<!--- For end of boot camp: Signposting for apprentices self study, further learning, online resources, practice etc. --->
-* [Git-it](https://github.com/jlord/git-it-electron)
-  Desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the command line.
-* [git-katas](https://github.com/eficode-academy/git-katas/) has a bunch of exercises that we’ve dipped into in this boot camp to practice git learning
-* [Git Pretty](http://justinhileman.info/article/git-pretty/) is a flow chart that helps you fix git messes
-* [Dangit, Git!?!](https://dangitgit.com/) is a written site with more detailed instructions about how to resolve problems
-* This [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/undoing-changes) is also a useful resource on undoing changes
-* [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) has some great animations which help bring git commands to life by visualising what is happening
-
 ### CI/CD
 
 * Five minute read: [Continuous Integration by ThoughtWorks](https://www.thoughtworks.com/continuous-integration)
@@ -59,17 +50,21 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
 * [Knightmare: A DevOps Cautionary Tale](https://dougseven.com/2014/04/17/knightmare-a-devops-cautionary-tale/) about Knight Capital disaster
 * [The Cathedral and the Bazaar](http://www.catb.org/~esr/writings/cathedral-bazaar/cathedral-bazaar/)
 * [Six Strategies for Application Deployment](https://thenewstack.io/deployment-strategies/)
+* [Trunk Based Development](https://trunkbaseddevelopment.com/) is a whole site dedicated to explaining TBD
 
 ### Git
 
-* [Git Pretty](http://justinhileman.info/article/git-pretty/) explains how to fix git messes you find yourself in
+* [Git Pretty](http://justinhileman.info/article/git-pretty/) is a flow chart that helps you fix git messes
+* [Dangit, Git!?!](https://dangitgit.com/) is a written site with more detailed instructions about how to resolve problems
 * [Git-it](https://github.com/jlord/git-it-electron) is a desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the command line.
-* [Trunk Based Development](https://trunkbaseddevelopment.com/)—a while site dedicated to explaining TBD
+* This [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/undoing-changes) is also a useful resource on undoing changes
 * [Git for Teams](http://gitforteams.com/) is has a book and some video aimed at helping you create a workflow strategy with your team, and learn to use Git
+* [git-katas](https://github.com/eficode-academy/git-katas/) has a bunch of exercises that we’ve dipped into in this boot camp to practice git learning
+* [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) has some great animations which help bring git commands to life by visualising what is happening
 
 ## Slides
 
-The slides can be viewed from the link at the top of the repository.
+The slides can be viewed from the link at the top of the repository. Hit ‘`?`’ to see navigation controls.
 
 ## Exercises
 
@@ -78,6 +73,11 @@ The code for the exercises in this boot camp is currently in the [tax_calculator
 * Setting up Travis CI, changing tax_calculator & watching Travis fail/pass
 * Changing tax_calculator using feature branches
 * Changing tax_calculator using trunk development and feature toggles
+* Git: reset
+* Git: amend
+* Git: detached head
+* Git: revert
+* Git: stash
 
 # Boot Camp Summary
 
