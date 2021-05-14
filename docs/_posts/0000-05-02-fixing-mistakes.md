@@ -149,7 +149,7 @@ Turn off this advice by setting config variable advice.detachedHead to false
   git checkout my-branch
   ```
 
---
+---
 
 ## Quick quiz
 

@@ -52,49 +52,27 @@ Note: Laptops closed.
 
 <img src="images/merge.png">
 
++ GitHub can visualise your branches
++ Click ‘Insights’ then ‘Network’ on the left
+
 Note: Created two branches  
   Merged diesel into master  
   Merged master into alternate  
   Merged alternate into master  
+
+--
+
+## git tree
+
++ Create command line text tree diagram to visualise branches
+```
+git log --oneline --decorate --all --graph
+```
++ Also see `tig` which is interactive
+  * `brew install tig`
 
 ---
 
 <img height="600" src="https://wac-cdn.atlassian.com/dam/jcr:61ccc620-5249-4338-be66-94d563f2843c/05%20(2).svg?cdnVersion=kv">
 
 Note: Git Flow: another branch based workflow  
-
----
-
-# Day One Feedback
-
-Ten responses
-
---
-
-## You liked…
-
-+ Practical examples of merge conflicts and branching / CI
-+ Help and patience from teachers and mentors
-+ Horizontal diagrams and understanding merge commits
-+ Finding out what Continuous Deployment means
-+ Getting set up before-hand
-
---
-
-## Things that could be better
-
-+ Travis exercise was vague
-+ Git is hard video
-+ Some slides moved too fast
-+ More advanced git and common git gotchas
-+ PDF boot camp notes
-+ More complex CI/CD scenarios, and deployment
-
---
-
-## We liked…
-
-+ You were punctual
-+ You got stuck in with git
-+ You helped each other
-+ You made some good suggestions for content

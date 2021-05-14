@@ -24,7 +24,7 @@
 
 + [gitignore.io](https://www.gitignore.io/) will generate based on the technology you use
 + It will be very verbose
-+ Easy to write shorter version yourself
++ Can be easier to write shorter version yourself
 
 --
 
@@ -48,3 +48,10 @@ exercises/java/build/
 
 *.pyc
 ```
+
+---
+
+## You want more git?!
+
++ [Git-it](https://github.com/jlord/git-it-electron)
+  Desktop (Mac, Windows and Linux) app that teaches you how to use Git and GitHub on the command line.
