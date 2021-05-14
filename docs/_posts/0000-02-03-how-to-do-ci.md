@@ -161,3 +161,4 @@ Notes: GitHub Actions is more verbose but seems more extensible
 
 <img src="https://imgs.xkcd.com/comics/git.png">
 
+<small>[XKCD](https://xkcd.com/1597/)</small> 
