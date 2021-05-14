@@ -280,6 +280,9 @@ git stash list
 + Might not be able to push
 + Might be told you need to force push… don’t!
 
+Note: Fine to rebase from the remote branch  
+Bad to rebase onto master then attempt to push  
+
 --
 
 ## Don’t use the `--force`!
@@ -305,6 +308,8 @@ git stash list
 - Places your commits after incoming commits
 - Makes you unpopular
 
+Note: Places your commits after incoming commits
+
 --
 
 ## When is it safe to force push?
@@ -327,7 +332,8 @@ Note: When no one else has a copy of the history
 - Merge always creates a new commit
 - Merge is one of the Bouviers
 
-Note: will make you unpopular and always creates a new commit
+Note: will make you unpopular (if used wrong)  
+**and** Merge always creates a new commit
 
 ---
 
