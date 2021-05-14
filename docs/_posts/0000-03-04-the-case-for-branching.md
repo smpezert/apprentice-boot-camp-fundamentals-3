@@ -282,7 +282,7 @@ How do you resolve them
 ## Resolving conflicts in the IDE
 
 + If you know you can throw one away, do so
-+ Otherwise enter the editor and it’s three columns
++ Otherwise, enter the editor and its three columns
     + Theirs
     + Current
     + Yours
