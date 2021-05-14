@@ -11,6 +11,12 @@
 
 --
 
+<img src=https://rakhim.org/images/honestly-undefined/git.jpg>
+
+<small>Source: [rakhim.org](https://rakhim.org/honestly-undefined/13/)</small>
+
+--
+
 ## [Git Pretty](http://justinhileman.info/article/git-pretty/)
 
 <img src=http://justinhileman.info/article/git-pretty/git-pretty.png>  <!-- .element width="50%" -->
