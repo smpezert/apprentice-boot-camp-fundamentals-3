@@ -92,35 +92,6 @@ git commit -m "your message here";
 # now your changes are on the correct branch
 ```
 
---
-
-## Scenario
-
-+ You started a new branch, made some changes, and want to push it
-+ You run `git push` and you get:
-  ```
-  fatal: The current branch dummy-branch has no upstream branch.
-  To push the current branch and set the remote as upstream, use
-  git push --set-upstream origin dummy-branch
-  ```
-+ What do you need to do?
-  + Read the error message!
-
---
-
-## Tracking remote branches
-
-+ Your master branch will track a remote master branch
-  ```
-  git branch -vv
-  ```
-+ New local branches don’t automatically track remote branches
-+ Possible to have a working copy with branches from multiple remotes
-  ```
-  git push -u <remote> <branch>
-  git push --set-upstream <remote> <branch>
-  ```
-
 ---
 
 ## Quick quiz
@@ -199,26 +170,3 @@ git stash apply --index
 git stash drop
 git stash list
 ```
-
---
-
-## Exercise: setting upstream
-
-* Create new local branch of this repository:
-  `apprentice-boot-camp-fundamentals-3`
-    ```
-    git checkout -b tracking-test
-    ```
-* Check tracking branches: 
-    ```
-    git branch -vv
-    ```
-* Try to push: 
-    ```
-    git push
-    ```
-* Push and set upstream: 
-    ```
-    git push -u origin tracking-test
-    ```
-* Check tracking branches again

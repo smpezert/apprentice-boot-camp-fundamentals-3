@@ -1,3 +1,28 @@
+## Exercise: setting upstream
+
+* Create new local branch of this repository:
+  `apprentice-boot-camp-fundamentals-3`
+    ```
+    git checkout -b tracking-test
+    ```
+* Check tracking branches:
+    ```
+    git branch -vv
+    ```
+* Try to push:
+    ```
+    git push
+    ```
+* Push and set upstream:
+    ```
+    git push -u origin tracking-test
+    ```
+* Check tracking branches again
+
+Note: do this one together, as a group
+
+--
+
 ## Exercise prep: add a collaborator
 
 * You are going to work in pairs
@@ -6,6 +31,8 @@
     * Click Settings in your forked repository on GitHub
     * Choose ‘Manage Access’
     * Add your partner
+
+Note: split off into rooms
 
 --
 
@@ -35,6 +62,7 @@ Notes:
 See branch ```petrol_tax``` for a starting point to this exercise if they haven't completed the previous one.  
 N.B. don't get them to checkout the branch (git weirdness will ensue), just get them to copy-paste the working code.  
 There are already test suites for these stories they just need to be enabled so the build runs them.  
+When pushing they will need to run `git push --set-upstream origin story_2` etc
 
 --
 
