@@ -14,4 +14,8 @@
     * Feel free to include your pronouns
 * How was your weekend? 🤬..........😶..........😎  
   Stamp underneath:
+* How much have you refactored? 🚫️..........🤏..........💯  
+  Stamp underneath: 
 * In a zombie apocolypse, what’s the first thing you’ll grab?
+
+Note: https://wheelofnames.com/
