@@ -208,6 +208,13 @@ Note: git revert --hard
 
 Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
+Note: [Reset Kata README](https://github.com/eficode-academy/git-katas/tree/master/reset)  
+```
+git reset --soft HEAD~1
+git reset --mixed HEAD~1
+git reset --hard HEAD~1
+```
+
 --
 
 <!-- .slide: style="font-size: 80%" -->
@@ -225,20 +232,41 @@ Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
 Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
 
+Note: [Amend Kata README](https://github.com/eficode-academy/git-katas/tree/master/amend)
+```
+git log -p
+git add .
+git commit --amend --no-edit
+git commit --amend --m "new message"
+```
+
 --
 
 <!-- .slide: style="font-size: 80%" -->
 
 ## Exercise: detached head
 
-1. In Terminal / Powershell, run ‘`cd exercises\git\detached-head`’
-1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
+1. In Terminal/Powershell, ‘`cd exercises\git\detached-head`’
+1. Run ‘`./setup.sh`’ or ‘`./setup.ps1`’ then ‘`cd exercise`’
 1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
 1. Read the message you got, then try to do these steps in order with single commands:
   1. Reattach HEAD to the tip of the master branch
-  1. Detach the HEAD from the branch and look at commit ‘B’
+  1. Detach the HEAD from the branch and look at commit ‘A’
   1. Create a new branch called ‘`mirror`’ and switch to it
   1. Create a file called mirrorfile
-  1. Commit to the new branch
+  1. Stage your new file and commit it (two commands)
+  1. Examine the structure of the branches
 
 Hint: use ‘`git status`’ and ‘`git log --oneline --graph --all`’ to investigate
+
+Note: [Detached Head Kata README](https://github.com/eficode-academy/git-katas/tree/master/detached-head)
+```
+git checkout master
+git log -p (find hash of ‘A’)
+git checkout [commit-hash-of-a]
+git checkout -b mirror OR git switch -c mirror
+touch mirrorfile
+git add mirrorfile
+git commit -m "Add mirrorfile"
+git log --oneline --graph --all
+```

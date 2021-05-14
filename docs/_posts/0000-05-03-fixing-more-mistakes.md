@@ -150,25 +150,51 @@ git commit -m "your message here";
 1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
 * Using [docs](https://git-scm.com/docs/git-revert), try to do these steps in order with single commands:
   1. Create a new commit which reverses the last commit
-  1. Create a new commit which reverses the commit which added credentials
+  1. Find which commit added credentials
+  1. Create a new commit which reverses that commit
+    * Note that the credentials have disappeared from `HEAD` version
 
-Hint: use ‘`git status`’ and ‘`git log --oneline`’ to check progress
+Hint: use ‘`cat greeting.txt`’, ‘`git status`’ and ‘`git log --oneline`’ to check progress
+
+Note: [Revert Kata README](https://github.com/eficode-academy/git-katas/tree/master/basic-revert)
+```
+git revert HEAD
+# observe result and
+# find credentials commit hash
+git log --oneline
+git revert [credentials-commit-hash]
+git log --oneline (show result)
+```
 
 --
 
-<!-- .slide: style="font-size: 80%" -->
+<!-- .slide: style="font-size: 75%" -->
 
 ## Exercise: git stash
 
-1. In Terminal / Powershell, run ‘`cd exercises\git\basic-stashing`’
+1. In Terminal/Powershell, ‘`cd exercises\git\basic-stashing`’
 1. Run ‘`./setup.sh`’ / ‘`./setup.ps1`’ then ‘`cd exercise`’
 1. You can run ‘`cd ..`’ and go back to step 2 to start over at any point
 1. Using [docs](https://git-scm.com/docs/git-stash), try to do these steps in order with single commands:
   1. Stash the work in progress (a mixture of staged/unstaged changes)
   1. Fix typos in bug.txt and commit (two steps)
+  1. Look at what stashes are available
   1. Restore stashed changes without removing from the stack, resulting in a mixture of staged/unstaged changes again
+    * You’ll need to supply an option to restore the state of the index
+  1. Drop your stash and check it has gone (two commands)
 
-Hint: use ‘`cat greeting.txt`’, ‘`git status`’ and ‘`git log --oneline`’ to check progress
+Hint: use ‘`git status`’ and ‘`git stash list`’ to check progress
+
+Note: [Stash Kata README](https://github.com/eficode-academy/git-katas/tree/master/basic-stashing)
+```
+git stash
+vi bug.txt
+git commit -am "Fix typos"
+git stash list
+git stash apply --index
+git stash drop
+git stash list
+```
 
 --
 
