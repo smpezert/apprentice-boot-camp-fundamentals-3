@@ -110,6 +110,10 @@ git commit -m "your message here";
 
 ## Tracking remote branches
 
++ Your master branch will track a remote master branch
+  ```
+  git branch -vv
+  ```
 + New local branches don’t automatically track remote branches
 + Possible to have a working copy with branches from multiple remotes
   ```
