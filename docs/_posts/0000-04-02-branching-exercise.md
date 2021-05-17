@@ -1,7 +1,7 @@
 ## Exercise: setting upstream
 
 * Create new local branch of this repository:
-  `apprentice-boot-camp-fundamentals-3`
+  `tax_calculator`
     ```
     git checkout -b tracking-test
     ```
