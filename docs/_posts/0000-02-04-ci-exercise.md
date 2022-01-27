@@ -2,11 +2,13 @@
 
 (in case you haven’t got set up yet)
 
-* Fork https://github.com/MCR-Digital/tax_calculator
+* Create a repo from this template https://github.com/MCR-Digital/tax_calculator
 * `git clone https://github.com/[USER]/tax_calculator.git`
 * Make sure you can run tests in your language  
 (they are all ignored to start with)
   * Java folk: open IntelliJ IDEA and from the `File` menu choose `Open`, then select the `build.gradle` file from the `exercises\java` directory.
+
+Note: explain difference between forking and using a template.  
 
 --
 
