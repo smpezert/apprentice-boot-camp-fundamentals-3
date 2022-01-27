@@ -93,7 +93,7 @@ Note:
 
 --
 
-## Ramped deployment pros/cons
+## Shadow deployment pros/cons
 
 + 👍 Real usage always beats scripted testing
 + 👎 Relies on manually monitoring or automating acceptance testing
