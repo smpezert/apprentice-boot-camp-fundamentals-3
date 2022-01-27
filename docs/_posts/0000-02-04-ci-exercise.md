@@ -14,7 +14,7 @@
 
 * Work in pairs
 * Fork the example repository https://github.com/MCR-Digital/tax_calculator.git
-* Log into https://travis-ci.org
+* Log into https://travis-ci.com
 * Check that you can see your repository in the list
 * Activate Travis CI for your fork
 
