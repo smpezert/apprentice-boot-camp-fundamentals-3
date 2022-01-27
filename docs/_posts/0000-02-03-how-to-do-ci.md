@@ -66,6 +66,15 @@ Note: Enterprises tend to favour on site code and CI buy moving towards cloud ho
 
 ---
 
+## Upcoming Travis CI exercise
+
++ Not expecting you to have used Travis CI
++ Using it today in an exercise as an example
++ Partly as it is so easy to set up
++ We don’t use it other than this boot camp
+
+--
+
 ## E.g. Travis CI
 
 + Authorise Travis CI to use your github.com account
