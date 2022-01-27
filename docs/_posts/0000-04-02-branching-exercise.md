@@ -54,10 +54,11 @@ git remote set-url origin https://github.com/[USER]/tax_calculator.git
 * Create two branches based on the same start point
   * `git checkout -b story_2`
   * `git checkout -b story_3`
-* One person implements Story 2
-* One person implements Story 3
+* One person enables Story 2 tests & implements
+* Other person enables Story 3 tests & implements
 * Both add to your TaxCalculator implementation with regular commits, ___***BOTH CHANGE THE SAME FILE***___
 * Merge branches back to master one by one
+  * Use a GitHub PR or merge on the command line
 * Check Travis after each push
 
 Notes:
