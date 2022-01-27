@@ -19,7 +19,8 @@
     ```
 * Check tracking branches again
 
-Note: do this one together, as a group
+Note: do this one together, as a group  
+  Share the exercise slide!  
 
 --
 
@@ -32,7 +33,8 @@ Note: do this one together, as a group
     * Choose ‘Manage Access’
     * Add your partner
 
-Note: split off into rooms
+Note: split off into rooms  
+Share the exercise slide!  
 
 --
 
@@ -62,7 +64,8 @@ Notes:
 See branch ```petrol_tax``` for a starting point to this exercise if they haven't completed the previous one.  
 N.B. don't get them to checkout the branch (git weirdness will ensue), just get them to copy-paste the working code.  
 There are already test suites for these stories they just need to be enabled so the build runs them.  
-When pushing they will need to run `git push --set-upstream origin story_2` etc
+When pushing they will need to run `git push --set-upstream origin story_2` etc  
+Share the exercise slide!  
 
 --
 

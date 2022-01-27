@@ -10,6 +10,7 @@
 * Turn the new features on one at a time
 
 Notes:
+Share the exercise slide!  
 See branch ```diesel_and_alternative_tax``` for a starting point to this exercise if they haven't completed the previous one.  
 N.B. don't get them to checkout the branch (git weirdness will ensue), just get them to copy-paste the working code.  
 There are already test suites for these stories they just need to be enabled so the build runs them.  

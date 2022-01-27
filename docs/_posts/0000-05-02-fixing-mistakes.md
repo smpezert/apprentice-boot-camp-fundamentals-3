@@ -219,6 +219,7 @@ git reset --soft HEAD~1
 git reset --mixed HEAD~1
 git reset --hard HEAD~1
 ```
+Share the exercise slide!  
 
 --
 
@@ -244,6 +245,7 @@ git add .
 git commit --amend --no-edit
 git commit --amend --m "new message"
 ```
+Share the exercise slide!  
 
 --
 
@@ -275,3 +277,4 @@ git add mirrorfile
 git commit -m "Add mirrorfile"
 git log --oneline --graph --all
 ```
+Share the exercise slide!  

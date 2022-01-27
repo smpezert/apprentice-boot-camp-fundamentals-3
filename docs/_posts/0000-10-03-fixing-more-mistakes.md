@@ -140,6 +140,7 @@ git log --oneline
 git revert [credentials-commit-hash]
 git log --oneline (show result)
 ```
+Share the exercise slide!  
 
 --
 
@@ -170,3 +171,4 @@ git stash apply --index
 git stash drop
 git stash list
 ```
+Share the exercise slide!  

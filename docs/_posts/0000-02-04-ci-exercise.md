@@ -9,6 +9,7 @@
   * Java folk: open IntelliJ IDEA and from the `File` menu choose `Open`, then select the `build.gradle` file from the `exercises\java` directory.
 
 Note: explain difference between forking and using a template.  
+  Share the exercise slide!
 
 --
 
@@ -16,11 +17,12 @@ Note: explain difference between forking and using a template.
 
 * Work in pairs
 * Log into https://travis-ci.com
+* You must confirm your Travis account in your email
 * Check that you can see your repository in the list
 * Activate Travis CI for your fork
 
-Note: Make sure you have the right Travis CI  
-  travis-ci.com is the paid for enterprise version  
+Note:  
+  Share the exercise slide!
 
 --
 
@@ -67,15 +69,19 @@ script:
 <!-- .element: style="font-size: 35%" -->
 
 Note: Remind them about the dot at the front of the filename!  
+  Share the exercise slide!  
 
 --
 
 ## Exercise Part 3: Make it fail
 
-* Find the tests which aren't running (the ones for petrol vehicles)  
-* Make the tests run (and fail)  
-* Push your change  
-* Watch it fail  
+* Pull down the changes (`.travis.yml`) you just made on GitHub
+* Find the tests which aren't running (the ones for petrol vehicles)
+* Make the tests run (and fail)
+* Push your change
+* Watch it fail
+
+Note: Need to pull before you can push.  
 
 --
 
@@ -90,6 +96,7 @@ Note: Remind them about the dot at the front of the filename!
 **\*N.B. you'll need to set the year to `2019` in your `TaxCalculator` object**
 
 Note: Did you get an email telling you it had failed?  
+  Share the exercise slide!  
 
 --
 

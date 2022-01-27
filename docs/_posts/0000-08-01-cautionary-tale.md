@@ -64,6 +64,9 @@ Bankrupt!
 * Discuss what happened
 * Note down 3–4 lessons that should be learned
 
+Note:
+  Share the exercise slide!  
+
 --
 
 ## What should we learn?
