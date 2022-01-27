@@ -85,6 +85,17 @@ Note: Need to pull before you can push.
 
 --
 
+## How does vehicle excise duty (vehicle tax) work?
+
++ How much tax you pay depends on a few things
++ In the first year it depends on the CO2 emissions and the fuel type
++ After the first year a ‘standard’ yearly rate applies depending on:
+  + the fuel type 
+  + the value (if it’s over £40,000)
++ There’s a detailed explanation on the [Auto Trader website](https://www.autotrader.co.uk/content/advice/car-tax-bands)
+
+--
+
 ## Exercise Part 4: Make it pass
 
 * Implement code to make **_only the petrol tests_** pass (see Story 1)
