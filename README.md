@@ -67,6 +67,7 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
 * This [Atlassian git tutorial](https://www.atlassian.com/git/tutorials/undoing-changes) is also a useful resource on undoing changes
 * [Git for Teams](http://gitforteams.com/) is has a book and some video aimed at helping you create a workflow strategy with your team, and learn to use Git
 * [git-katas](https://github.com/eficode-academy/git-katas/) has a bunch of exercises that we’ve dipped into in this boot camp to practice git learning
+* [Learn Git Branching](https://learngitbranching.js.org/) is a git repository visualizer, sandbox, and a series of educational tutorials and challenges. It helps you understand git through visualising what you do.
 * [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) has some great animations which help bring git commands to life by visualising what is happening
 
 ## Slides
