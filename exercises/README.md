@@ -2,19 +2,6 @@
 
 This code is designed to practice approaches to CI and CD in a boot camp. It is a simplified implementation of the rules for UK vehicle tax as of 2017 (the full rules can be found here https://www.gov.uk/vehicle-tax-rate-tables).
 
-## Preparation
-
-It is critical that you can push changes to github.com. Check you can by logging out and logging in again. You will need to have a git client installed. In addition, there are language specific steps below.
-
-1. Create a copy of the project by clicking ‘Use this template’
-1. Do not clone the project using your IDE as you’ll end up opening/importing the root directory. Clone your fork from the command line by running `git clone https://github.com/YOUR_USERNAME/apprentice-boot-camp-fundamentals-3.git`
-1. Complete the language specific set up to get your environment working:
-    * [Java](java)
-    * [JavaScript](javascript)
-    * [.NET](dotnet)
-
-That’s all in terms of preparation. Please don’t read ahead, as you’ll get the most out of the boot camp if you haven’t already read the material.
-
 ## The rules for use in the exercises are summarized below:
 
 ### Story 1

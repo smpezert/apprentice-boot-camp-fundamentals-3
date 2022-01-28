@@ -30,7 +30,14 @@ Mentors should be comfortable with branching, feature toggles, setting up Travis
 
 ## Prep-work for apprentices
 
-* See [the preparation description](exercises/README.md#preparation)
+* Make sure you can sign in to github.com with your own account by signing out and signing in again
+* Open [the template repo](https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3/) and click ‘Use this template’
+* Clone your repo: `git clone https://github.com/[your-username]/apprentice-boot-camp-fundamentals-3.git`
+* Follow the instructions in the README for your language under the `exercises` directory, **making sure you can run the tests** (which are all ignored)
+  * [Java](exercises/java/README.md)
+  * [JavaScript](exercises/javascript/README.md)
+  * [C#](exercises/dotnet/README.md)
+* It’s normal to have problems with this, so just let us know! :)
 
 ### Follow-on tasks
 

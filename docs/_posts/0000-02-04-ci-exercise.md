@@ -1,15 +1,9 @@
 ## Exercise prep
 
-(in case you haven’t got set up yet)
-
-* Create a repo from this template https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3/
-* `git clone https://github.com/[USER]/apprentice-boot-camp-fundamentals-3.git`
-* Make sure you can run tests in your language  
-(they are all ignored to start with)
-  * Java folk: open IntelliJ IDEA and from the `File` menu choose `Open`, then select the `build.gradle` file from the `exercises\java` directory.
+If you haven’t got set up yet, see the [preparation instructions in the README](/README.md#prep-work-for-apprentices).
 
 Note: explain difference between forking and using a template.  
-  Share the exercise slide!
+  Share the exercise slide!  
 
 --
 

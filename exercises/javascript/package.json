@@ -7,11 +7,13 @@
     "test": "test"
   },
   "scripts": {
-    "test": "jest test"
+    "test": "jest test --notify",
+    "test:watch": "jest --watch"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "jest": "^27.4.7"
+    "jest": "^27.4.7",
+    "node-notifier": "^10.0.0"
   }
 }
