@@ -1,7 +1,6 @@
 ## Exercise: setting upstream
 
 * Create new local branch of this repository:
-  `tax_calculator`
     ```
     git checkout -b tracking-test
     ```
@@ -40,10 +39,10 @@ Share the exercise slide!
 
 ## Exercise prep: change your remote
 
-* The ___***OTHER***___ person needs to point their local tax_calculator repository to your fork
+* The ___***OTHER***___ person needs to point their `origin` remote at your repository
 
 ```
-git remote set-url origin https://github.com/[USER]/tax_calculator.git
+git remote set-url origin https://github.com/[USER]/apprentice-boot-camp-fundamentals-3.git
 ```
 
 --

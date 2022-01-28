@@ -2,8 +2,8 @@
 
 (in case you haven’t got set up yet)
 
-* Create a repo from this template https://github.com/MCR-Digital/tax_calculator
-* `git clone https://github.com/[USER]/tax_calculator.git`
+* Create a repo from this template https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3/
+* `git clone https://github.com/[USER]/apprentice-boot-camp-fundamentals-3.git`
 * Make sure you can run tests in your language  
 (they are all ignored to start with)
   * Java folk: open IntelliJ IDEA and from the `File` menu choose `Open`, then select the `build.gradle` file from the `exercises\java` directory.
@@ -16,13 +16,17 @@ Note: explain difference between forking and using a template.
 ## Exercise Part 1: Set up Travis CI
 
 * Work in pairs
-* Log into https://travis-ci.com
-* You must confirm your Travis account in your email
+* Log into https://travis-ci.com with your GitHub account
+* [Activate your repositories](https://app.travis-ci.com/account/repositories)
+* You may need to confirm your Travis account in your email
 * Check that you can see your repository in the list
 * Activate Travis CI for your fork
+* Subscribe to the free trial
 
 Note:  
-  Share the exercise slide!
+  You’ll be asked to authorise a Travis app  
+  You can limit the repositories it has access to  
+  Share the exercise slide!  
 
 --
 

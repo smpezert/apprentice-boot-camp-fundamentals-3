@@ -30,7 +30,7 @@ Mentors should be comfortable with branching, feature toggles, setting up Travis
 
 ## Prep-work for apprentices
 
-* See [the preparation description](https://github.com/MCR-Digital/tax_calculator/#preparation)
+* See [the preparation description](exercises/README.md#preparation)
 
 ### Follow-on tasks
 
@@ -68,8 +68,6 @@ The slides can be viewed from the link at the top of the repository. Hit ‘`?`�
 
 ## Exercises
 
-The code for the exercises in this boot camp is currently in the [tax_calculator repository](https://github.com/MCR-Digital/tax_calculator).
-
 * Setting up Travis CI, changing tax_calculator & watching Travis fail/pass
 * Changing tax_calculator using feature branches
 * Changing tax_calculator using trunk development and feature toggles
@@ -103,7 +101,7 @@ The code for the exercises in this boot camp is currently in the [tax_calculator
 * Review the summary above
 * Have a go at the exercises to get a gist for the
     * Exercises are described in the slides linked to at the top of the repo
-    * Code for the exercises is in the [tax_calculator repository](https://github.com/MCR-Digital/tax_calculator)
+    * Code for the exercises is in the `exercises` directory
 * On the day get involved when they are doing the exercises and help them when they get stuck
 * Ask them open questions about what they are doing
   * Ask to see what they’ve done
