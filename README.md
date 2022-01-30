@@ -6,10 +6,14 @@
 
 ## Competencies, Behaviours and Knowledge units
 
-* TC1 Logic
-* TC4 Test
-* TC8 Deployment
-* TC9 Software development life cycle
+These relate to the KSBs defined in the [Level 4 Software Developer standard](https://www.instituteforapprenticeships.org/apprenticeship-standards/software-developer-v1-1).
+
+* **S1**: create logical and maintainable code
+* **S4**: test code and analyse results to correct errors found using unit testing
+* **S12**: follow software designs and functional or technical specifications
+* **S10**: build, manage and deploy code into the relevant environment
+* **S14**: follow company, team or client approaches to continuous integration, version and source control
+* **S14**: follow company, team or client approaches to continuous integration, version and source control
 
 ## Resources 
 
