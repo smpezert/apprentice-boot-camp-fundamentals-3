@@ -2,7 +2,7 @@ package tax;
 
 import java.time.LocalDate;
 
-public abstract class TaxCalculator{
+abstract class TaxCalculator{
     private final int year;
 
     abstract int calculateTax(Vehicle vehicle);
