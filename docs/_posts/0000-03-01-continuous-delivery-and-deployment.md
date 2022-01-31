@@ -1,6 +1,6 @@
 ## Continuous Delivery & Deployment
 
-Structure:
+Going to cover:
 
 + What is it?
 + Why is it important?
@@ -8,6 +8,7 @@ Structure:
 
 Note: Laptops closed.  
   Ask people what they think it means  
+  Why / how covered later
 
 --
 
@@ -53,7 +54,7 @@ Note: At any time means when code is pushed.
 
 Note: Manually triggering an automated process vs an automatic process.  
 
----
+--
 
 <img src="images/continous-integration-delivery-deployment.svg">
 
