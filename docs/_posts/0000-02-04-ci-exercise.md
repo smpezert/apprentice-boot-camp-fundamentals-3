@@ -66,7 +66,8 @@ script:
 ```
 <!-- .element: style="font-size: 35%" -->
 
-Note: Remind them about the dot at the front of the filename!  
+Note: Remind them about the dot at the front of the filename!
+  Don’t share the travis code over chat etc, as whitespace can get stripped.  
   Share the exercise slide!  
 
 --
