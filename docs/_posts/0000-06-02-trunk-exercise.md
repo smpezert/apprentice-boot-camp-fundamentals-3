@@ -3,8 +3,8 @@
 
 * Work in pairs - ___***SHARING THE SAME GIT REPOSITORY***___
 * Implement your own feature toggle
-* One person implements Story 4 - After the first year
-* One person implements Story 5 - Expensive vehicles after the first year
+* One person implements [Story 4](https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3/tree/master/exercises#story-4) - After the first year
+* One person implements [Story 5](https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3/tree/master/exercises#story-5) - Expensive vehicles after the first year
 * Leave toggles off so that rules are not applied yet
   * Tests need to pass—turn the toggle on in your tests
 * Turn the new features on one at a time
