@@ -96,7 +96,7 @@ Note: Need to pull before you can push.
 
 ## Exercise Part 4: Make it pass
 
-* Implement code to make **_only the petrol tests_** pass (see Story 1)
+* Implement code to make **_only the petrol tests_** pass (see [Story 1](https://github.com/MCR-Digital/apprentice-boot-camp-fundamentals-3/tree/master/exercises#story-1))
 * ___***Do not change ‘DummyTaxCalculator’***___—write your own implementation (e.g. ‘DefaultTaxCalculator’)*
 * Try to ___***keep your build green***___
 * ___***Do not change the tests***___ (except to introduce your new calculator)
