@@ -73,6 +73,7 @@ Organisation mentors should look to exercise the knowledge we’ve covered in th
 * [git-katas](https://github.com/eficode-academy/git-katas/) has a bunch of exercises that we’ve dipped into in this boot camp to practice git learning
 * [Learn Git Branching](https://learngitbranching.js.org/) is a git repository visualizer, sandbox, and a series of educational tutorials and challenges. It helps you understand git through visualising what you do.
 * [CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) has some great animations which help bring git commands to life by visualising what is happening
+* If you use zsh, then https://ohmyz.sh/ with the [powerlevel10k theme](https://github.com/romkatv/powerlevel10k) will give you git command line tips and visibility of the branch you are on in your prompt.
 
 ## Slides
 
