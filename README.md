@@ -126,10 +126,6 @@ The slides can be viewed from the link at the top of the repository. Hit ‘`?`�
 
 The git exercises are included as a git subtree from https://github.com/eficode-academy/git-katas.git. **It is best not to update them** unless you are familiar with maintaining changes to subtrees. To fetch changes from the origin, run `git subtree pull --prefix exercises/git https://github.com/eficode-academy/git-katas.git master --squash`.
 
-# Working with the slides
+# Contributing
 
-The slides are stored as Markdown files in `docs/_posts` and are presented using a combination of Jekyll and [reveal.js](https://revealjs.com/#/). A [remote Jekyll theme](https://github.com/autotraderuk/jekyll-revealjs) is used to help make changes to the Jekyll code centrally.
-
-The easiest way to preview your changes locally is to use docker to run Jekyll. To do this, [install docker](https://www.docker.com/get-started) if you haven’t already and run `docker-compose up` from the root of this project in a terminal. Your changes will be visible on <http://localhost:4000/>. Any changes you make to the slides will be reflected in your browser—there’s no need to restart docker. You can hit `ctrl-c` to stop the process.
-
-Once you push your changes the slides will be published using GitHub Pages automatically (see the link at the top of the repository).
+If you’d like to contribute changes to the slides or exercises, please see [our contriting guidance](CONTRIBUTING.md).
