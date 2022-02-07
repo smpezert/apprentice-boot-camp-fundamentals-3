@@ -1,6 +1,6 @@
 # Contributing
 
-Thanks for looking at contributing! We welcome contributions from anyone. If they address [issues](/issues) we’ve listed, even better! Please note that this repo has a [Creative Commons Attribution-ShareAlike 4.0 International](LICENCE.txt) attached.
+Thanks for looking at contributing! We welcome contributions from anyone. If they address [issues](../../issues) we’ve listed, even better! Please note that this repo has a [Creative Commons Attribution-ShareAlike 4.0 International](LICENCE.txt) attached.
 
 The default branch is protected, so changes must be made via a pull request. To contribute, please create your changes on a branch and create a pull request. If you’re a member of @bootcamp-delivery-team then you can push your branch to this repo. We prefer this mechanism to forking, but feel free to fork if you don’t have access to push here.
 
