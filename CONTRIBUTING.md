@@ -16,6 +16,6 @@ If your change relates to an issue, then please [link your commit(s) or PR to th
 
 The slides are stored as Markdown files in `docs/_posts` and are presented using a combination of Jekyll and [reveal.js](https://revealjs.com/#/). A [remote Jekyll theme](https://github.com/autotraderuk/jekyll-revealjs) is used to help make changes to the Jekyll code centrally.
 
-The easiest way to preview your changes locally is to use Docker to run Jekyll. To do this, [install docker](https://www.docker.com/get-started) if you haven’t already and run `docker compose up` from the root of this project in a terminal. Your changes will be visible on <http://localhost:4000/>. Any changes you make to the slides will be reflected in your browser—there’s no need to restart docker. You can hit `ctrl-c` to stop the process.
+The easiest way to preview your changes locally is to use Docker to run Jekyll. To do this, [install Docker](https://www.docker.com/get-started) if you haven’t already and run `docker compose up` from the root of this project in a terminal. Your changes will be visible on <http://localhost:4000/>. Any changes you make to the slides will be reflected in your browser—there’s no need to restart the Docker container. You can hit `ctrl-c` to stop the process.
 
 Once you push your changes the slides will be published using GitHub Pages automatically (see the link at the top of the repository).
