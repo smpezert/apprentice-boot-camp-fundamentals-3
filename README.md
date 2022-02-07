@@ -128,4 +128,4 @@ The git exercises are included as a git subtree from https://github.com/eficode-
 
 # Contributing
 
-If you’d like to contribute changes to the slides or exercises, please see [our contriting guidance](CONTRIBUTING.md).
+If you’d like to contribute changes to the slides or exercises, please see [our contributing guidance](CONTRIBUTING.md).
