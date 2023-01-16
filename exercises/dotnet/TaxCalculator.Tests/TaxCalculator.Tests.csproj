@@ -1,17 +1,16 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>netcoreapp2.1</TargetFramework>
+    <TargetFramework>net6.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="microsoft.net.test.sdk" Version="15.9.0" />
-    <PackageReference Include="nunit" Version="3.11.0" />
-    <PackageReference Include="nunit3testadapter" Version="3.12.0" />
+    <PackageReference Include="microsoft.net.test.sdk" Version="17.4.1" />
+    <PackageReference Include="nunit" Version="3.13.3" />
+    <PackageReference Include="nunit3testadapter" Version="4.3.1" />
   </ItemGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\TaxCalculator\TaxCalculator.csproj" />
   </ItemGroup>
-
 </Project>
