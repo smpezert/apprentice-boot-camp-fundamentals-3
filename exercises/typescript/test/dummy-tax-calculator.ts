@@ -4,7 +4,7 @@ import { Vehicle } from '../vehicle';
 /**
 * @deprecated
 */
-let DummyTaxCalculator = class DummyTaxCalculator extends TaxCalculator {
+class DummyTaxCalculator extends TaxCalculator {
   constructor() {
     super(2023);
   }
