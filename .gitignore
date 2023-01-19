@@ -18,3 +18,5 @@ exercises/java/build/
 
 vendor/
 .phpunit.*
+
+exercises/typescript/node_modules
