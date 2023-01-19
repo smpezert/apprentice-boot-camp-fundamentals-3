@@ -15,3 +15,8 @@ exercises/java/.gradle
 exercises/java/build/
 
 *.pyc
+
+vendor/
+.phpunit.*
+
+exercises/typescript/node_modules
