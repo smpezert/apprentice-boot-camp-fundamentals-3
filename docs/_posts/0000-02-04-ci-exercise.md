@@ -26,23 +26,62 @@ Note:
 * The only configuration you should need to change is your build's working directory
 * Hopefully see your tests pass
 
+--
+
 Java
 ```yaml
-with:
-  arguments: build
-  build-root-directory: exercises/java
+- name: Build with Gradle
+  uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+  with:
+    arguments: build
+    build-root-directory: exercises/java
 ```
-<!-- .element: style="font-size: 35%" -->
+
+--
 
 C#
 ```yaml
 defaults:
   run:
     working-directory: exercises/dotnet
-```
-<!-- .element: style="font-size: 35%" -->
 
-//TODO add other languages here
+jobs:
+  ...
+```
+
+--
+
+PHP
+```yaml
+defaults:
+  run:
+    working-directory: exercises/php
+    
+jobs:
+  ...
+  - name: Run test suite
+    run: ./vendor/bin/phpunit --testdox tests
+```
+
+--
+
+Typescript
+```yaml
+defaults:
+  run:
+    working-directory: exercises/typescript
+
+jobs:
+  ...
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'exercises/typescript/package-lock.json'
+```
 
 --
 
