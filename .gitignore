@@ -20,3 +20,7 @@ vendor/
 .phpunit.*
 
 exercises/typescript/node_modules
+
+exercises/kotlin/.idea
+exercises/kotlin/.gradle
+exercises/kotlin/build
