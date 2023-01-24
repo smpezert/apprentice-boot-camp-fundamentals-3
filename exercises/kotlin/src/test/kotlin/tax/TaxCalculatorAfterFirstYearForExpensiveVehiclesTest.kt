@@ -14,18 +14,18 @@ class TaxCalculatorAfterFirstYearForExpensiveVehiclesTest {
     @Test
     fun subsequentYearsTaxForPetrolIfOver40K() {
         val vehicle = Vehicle(206, FuelType.PETROL, FIRST_OF_APRIL_2017, 50000)
-        assertEquals(450, taxCalculator!!.calculateTax(vehicle))
+        assertEquals(450, taxCalculator.calculateTax(vehicle))
     }
 
     @Test
     fun subsequentYearsTaxForElectricIfOver40K() {
         val vehicle = Vehicle(206, FuelType.ELECTRIC, FIRST_OF_APRIL_2017, 50000)
-        assertEquals(310, taxCalculator!!.calculateTax(vehicle))
+        assertEquals(310, taxCalculator.calculateTax(vehicle))
     }
 
     @Test
     fun subsequentYearsTaxForAlternativeFuelIfOver40K() {
         val vehicle = Vehicle(206, FuelType.ALTERNATIVE_FUEL, FIRST_OF_APRIL_2017, 50000)
-        assertEquals(440, taxCalculator!!.calculateTax(vehicle))
+        assertEquals(440, taxCalculator.calculateTax(vehicle))
     }
 }

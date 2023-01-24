@@ -1,6 +1,6 @@
 package toggle
 
-class BowlingCalculator constructor(private val spareScoring: Boolean) {
+class BowlingCalculator (private val spareScoring: Boolean) {
 
     fun score(vararg bowls: Int): Int {
         var score = 0
