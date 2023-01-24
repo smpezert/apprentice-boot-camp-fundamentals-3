@@ -1,6 +1,6 @@
 package toggle
 
-import org.junit.Ignore
+import kotlin.test.Ignore
 import org.junit.jupiter.api.Test
 import kotlin.test.assertEquals
 
