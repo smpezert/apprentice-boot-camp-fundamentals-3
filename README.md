@@ -30,7 +30,7 @@ Twoâ€“three mentors required in addition to leads. These should be able to cover
 
 Exercises (katas and code starters) will need to be ported to required languages.
 
-Mentors should be comfortable with branching, feature toggles, setting up Travis for their chosen language.
+Mentors should be comfortable with branching, feature toggles, setting up GitHub Actions for their chosen language.
 
 ## Prep-work for apprentices
 
@@ -84,7 +84,7 @@ The slides can be viewed from the link at the top of the repository. Hit â€˜`?`â
 
 ## Exercises
 
-* Setting up Travis CI, changing tax_calculator & watching Travis fail/pass
+* Setting up GitHub Actions CI, changing tax_calculator & watching GitHub Actions fail/pass
 * Changing tax_calculator using feature branches
 * Changing tax_calculator using trunk development and feature toggles
 * Git: reset
@@ -98,7 +98,7 @@ The slides can be viewed from the link at the top of the repository. Hit â€˜`?`â
 * Continuous Integration
   * What it is and why we do it
   * Examples of different CI systems
-  * Exercise: add Travis to fork of existing repo
+  * Exercise: add GitHub Actions to fork of existing repo
   * Exercise: Make change to their fork and show (hopefully) successful build
 * Continuous Delivery/Deployment
   * What it is and why we do it

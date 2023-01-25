@@ -47,7 +47,7 @@ Note: Some tests are unreliable—might fail 1% of the time.
 * GoCD
 * Jenkins
 * TravisCI
-* GitHub Actions (new)
+* GitHub Actions
 
 Note: Enterprises tend to favour on site code and CI buy moving towards cloud hosted solutions.   
 
@@ -66,32 +66,27 @@ Note: Enterprises tend to favour on site code and CI buy moving towards cloud ho
 
 ---
 
-## Upcoming Travis CI exercise
+## Upcoming GitHub Actions CI exercise
 
-+ Not expecting you to have used Travis CI
++ Not expecting you to have used GitHub Actions
 + Using it today in an exercise as an example
-+ Partly as it is so easy to set up
++ Partly as it is easy to set up
 + We don’t use it other than this boot camp
 
 --
 
-## E.g. Travis CI
+## E.g. GitHub Actions CI
 
-+ Authorise Travis CI to use your github.com account
-+ Activate Travis CI with your repository
-+ Add a `.travis.yml` file to your repository
++ Add a YAML config file to your repository
 + Optional: add build badge to the repository
-
-Note: GitHub Actions is the same, and you don’t even have to leave GitHub!
 
 --
 
 ## Then…
 
-+ GitHub tells Travis CI each time there is something to fetch and build
-+ Travis fetches that version of the code
-+ Travis works out what to run based on repository contents (including `.travis.yml`)
-+ Travis reports status back to GitHub to mark commits with success/failure
++ Every time a commit is made
++ GitHub fetches that version of the code
++ GitHub works out what to run based on repository contents (including the YAML config)
 
 --
 
@@ -99,70 +94,15 @@ Note: GitHub Actions is the same, and you don’t even have to leave GitHub!
 
 Status appears against each commit and PR.
 
-<img src=images/travis-build-status.png>
+<img src=images/github-actions-build-status.png>
 
 --
 
-## Configuring Travis
+## Configuring GitHub Actions
 
-* Contents of `.travis.yml` tells Travis what to do
-* Specific to each language… e.g.
+* Contents of a YAML file tell GitHub what to do
+* Specific to each language…
 
-```yaml
-language: java
-```
-
-Note: Travis looks at repo to work out how to build once it knows language.  
-  One line is enough to build and validate your Java.  
-
---
-
-## Travis vs GitHub Actions
-
-Travis:
-
-```yaml
-language: node_js
-before_script: "cd exercises/javascript"
-node_js:
-  - 10
-```
-<!-- .element: style="font-size: 35%" -->
-
-GitHub Actions:
-
-```yaml
-name: Node CI
-
-on: [push]
-
-jobs:
-  build:
-
-    runs-on: ubuntu-latest
-
-    steps:
-    - uses: actions/checkout@v1
-    - name: Read .nvmrc
-      run: echo ::set-output name=NVMRC::$(cat .nvmrc)
-      id: nvm
-      working-directory: exercises/javascript
-    - name: Setup node
-      uses: actions/setup-node@v1
-      with:
-        node-version: '${{ steps.nvm.outputs.NVMRC }}'
-    - name: npm install, build, and test
-      run: |
-        npm ci
-        npm test
-      working-directory: exercises/javascript
-      env:
-        CI: true
-```
-
-<!-- .element: style="font-size: 25%" -->
-
-Notes: GitHub Actions is more verbose but seems more extensible
 
 ---
 

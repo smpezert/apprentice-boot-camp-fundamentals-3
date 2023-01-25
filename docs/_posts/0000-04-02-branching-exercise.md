@@ -58,7 +58,7 @@ git remote set-url origin https://github.com/[USER]/apprentice-boot-camp-fundame
 * Both add to your TaxCalculator implementation with regular commits, ___***BOTH CHANGE THE SAME FILE***___
 * Merge branches back to master one by one
   * Use a GitHub PR or merge on the command line
-* Check Travis after each push
+* Check GitHub Actions after each push
 
 Notes:
 See branch ```petrol_tax``` for a starting point to this exercise if they haven't completed the previous one.  

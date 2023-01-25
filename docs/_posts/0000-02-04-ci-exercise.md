@@ -7,74 +7,87 @@ Note: explain difference between forking and using a template.
 
 --
 
-## Exercise Part 1: Set up Travis CI
+## Exercise Part 1: Set up GitHub Actions
 
-* Work in pairs
-* Log into https://travis-ci.com with your GitHub account
-* [Activate your repositories](https://app.travis-ci.com/account/repositories)
-* You may need to confirm your Travis account in your email
-* Check that you can see your repository in the list
-* Activate Travis CI for your fork
-* Subscribe to the free trial
+* Look at your fork of the repo at https://github.com
+* Select the 'Actions' tab
+* Click the 'New workflow' button
+* Find the right workflow for your language (ask if you're not sure)
+* Click the 'Configure' button
+* You should see an online editor with a default YAML file loaded
 
-Note:  
-  You’ll be asked to authorise a Travis app  
-  You can limit the repositories it has access to  
+Note:
   Share the exercise slide!  
 
 --
 
 ## Exercise Part 2: Configure your build
 
-* On GitHub, create `.travis.yml` at root of repo
+* The only configuration you should need to change is your build's working directory
 * Hopefully see your tests pass
 
+--
 
+Java / Kotlin
 ```yaml
-language: java
-before_script: "cd exercises/java"
+- name: Build with Gradle
+  uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
+  with:
+    arguments: build
+    build-root-directory: exercises/java
 ```
-<!-- .element: style="font-size: 35%" -->
 
+--
+
+C#
 ```yaml
-language: csharp
-solution: exercises/dotnet/TaxCalculator.sln
-before_script: "cd exercises/dotnet"
-mono: none
-dotnet: "2.1.502"
-script: 
-  - "dotnet restore"
-  - "dotnet test"
-```
-<!-- .element: style="font-size: 35%" -->
+defaults:
+  run:
+    working-directory: exercises/dotnet
 
+jobs:
+  ...
+```
+
+--
+
+PHP
 ```yaml
-language: node_js
-before_install: "cd exercises/javascript"
-node_js:
-  - 10
+defaults:
+  run:
+    working-directory: exercises/php
+    
+jobs:
+  ...
+  - name: Run test suite
+    run: ./vendor/bin/phpunit --testdox tests
 ```
-<!-- .element: style="font-size: 35%" -->
 
+--
+
+Javascript / Typescript
 ```yaml
-language: python
-before_script: "cd exercises/python"
-python: 
-  - "3.6"
-script: 
-  - pytest
-```
-<!-- .element: style="font-size: 35%" -->
+defaults:
+  run:
+    working-directory: exercises/typescript
 
-Note: Remind them about the dot at the front of the filename!
-  Don’t share the travis code over chat etc, as whitespace can get stripped.  
-  Share the exercise slide!  
+jobs:
+  ...
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+          cache: 'npm'
+          cache-dependency-path: 'exercises/typescript/package-lock.json'
+```
 
 --
 
 ## Exercise Part 3: Make it fail
 
-* Pull down the changes (`.travis.yml`) you just made on GitHub
+* Pull down the changes (the YAML config) you just made on GitHub
 * Find the tests which aren't running (the ones for petrol vehicles)
 * Make the tests run (and fail)
 * Push your change
