@@ -28,7 +28,7 @@ Note:
 
 --
 
-Java
+Java / Kotlin
 ```yaml
 - name: Build with Gradle
   uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
@@ -65,7 +65,7 @@ jobs:
 
 --
 
-Typescript
+Javascript / Typescript
 ```yaml
 defaults:
   run:
