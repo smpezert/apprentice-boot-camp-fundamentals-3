@@ -39,8 +39,11 @@ Mentors should be comfortable with branching, feature toggles, setting up Travis
 * Clone your repo: `git clone https://github.com/[your-username]/apprentice-boot-camp-fundamentals-3.git`
 * Follow the instructions in the README for your language under the `exercises` directory, **making sure you can run the tests** (which are all ignored)
   * [Java](exercises/java/README.md)
+  * [Kotlin](exercises/kotlin)
   * [JavaScript](exercises/javascript/README.md)
+  * [Typescript](exercises/typescript/README.md)
   * [C#](exercises/dotnet/README.md)
+  * [PHP](exercises/php/README.md)
 * It’s normal to have problems with this, so just let us know! :)
 
 ### Follow-on tasks
