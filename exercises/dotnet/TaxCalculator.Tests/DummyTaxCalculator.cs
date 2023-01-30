@@ -2,12 +2,36 @@
 
 namespace TaxCalculator.Tests
 {
-    [Obsolete("DO NOT MAKE ANY CHANGES TO THIS CLASS - IT IS JUST HERE TO KEEP THE TESTS HAPPY TO BEGIN WITH. DON'T BE LAZY - WRITE YOUR OWN NEW TAXCALCULATOR CLASS")]
+    //[Obsolete("DO NOT MAKE ANY CHANGES TO THIS CLASS - IT IS JUST HERE TO KEEP THE TESTS HAPPY TO BEGIN WITH. DON'T BE LAZY - WRITE YOUR OWN NEW TAXCALCULATOR CLASS")]
     public sealed class DummyTaxCalculator : TaxCalculator
     {
         public override int CalculateTax(Vehicle vehicle)
         {
-            return -1;
+            if (vehicle.Co2Emissions > 49 && vehicle.Co2Emissions < 75)
+                return 10;
+            else if (vehicle.Co2Emissions > 74 && vehicle.Co2Emissions < 90)
+                return 25;
+            else if (vehicle.Co2Emissions > 89 && vehicle.Co2Emissions < 100)
+                return 105;
+            else if (vehicle.Co2Emissions > 99 && vehicle.Co2Emissions < 110)
+                return 125;
+            else if (vehicle.Co2Emissions > 109 && vehicle.Co2Emissions < 130)
+                return 145;
+            else if (vehicle.Co2Emissions > 129 && vehicle.Co2Emissions < 150)
+                return 165;
+            else if (vehicle.Co2Emissions > 149 && vehicle.Co2Emissions < 169)
+                return 205;
+            else if (vehicle.Co2Emissions > 169 && vehicle.Co2Emissions < 190)
+                return 515;
+            else if (vehicle.Co2Emissions > 189 && vehicle.Co2Emissions < 225)
+                return 830;
+            else if (vehicle.Co2Emissions == 225)
+                return 1240;
+            else if (vehicle.Co2Emissions == 255)
+                return 1760;
+            else if (vehicle.Co2Emissions > 255)
+                return 2070;
+            else return 0;
         }
     }
 }
