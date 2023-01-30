@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace TaxCalculator.Tests
 {
@@ -6,6 +7,24 @@ namespace TaxCalculator.Tests
     public sealed class DummyTaxCalculator : TaxCalculator
     {
         public override int CalculateTax(Vehicle vehicle)
+        {
+            var emissions = vehicle.Co2Emissions;
+            var fuelType = vehicle.FuelType;
+            var cost = 0;
+
+            if (fuelType.Equals(FuelType.Petrol))
+            {
+                cost = CalculatePetrolTax(vehicle);
+            }
+            else if (fuelType.Equals(FuelType.AlternativeFuel))
+            {
+                cost = GetTaxBandFromEmissions(emissions, AlternativeFuelPriceIndex.index);
+            }
+
+            return cost;
+        }
+
+        private static int CalculatePetrolTax(Vehicle vehicle)
         {
             if (vehicle.Co2Emissions > 49 && vehicle.Co2Emissions < 75)
                 return 10;
@@ -32,6 +51,20 @@ namespace TaxCalculator.Tests
             else if (vehicle.Co2Emissions > 255)
                 return 2070;
             else return 0;
+        }
+
+        private static int GetTaxBandFromEmissions(int emissions, Dictionary<int, int> index)
+        {
+            var result = 0;
+            foreach (var taxband in index)
+            {
+                if (emissions <= taxband.Key)
+                {
+                    result = taxband.Value;
+                    break;
+                }
+            }
+            return result;
         }
     }
 }
