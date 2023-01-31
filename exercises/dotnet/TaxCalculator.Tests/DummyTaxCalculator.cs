@@ -42,7 +42,7 @@ namespace TaxCalculator.Tests
                 cost = CalculatePetrolTax(vehicle);
             }
 
-            else if (vehicle.FuelType == FuelType.Diesel)
+            else if (vehicle.FuelType.Equals(FuelType.Diesel))
             {
                 cost = CalculateDieselTax(vehicle);
             }
