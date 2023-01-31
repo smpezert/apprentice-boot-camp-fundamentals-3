@@ -21,6 +21,22 @@ namespace TaxCalculator.Tests
             var fuelType = vehicle.FuelType;
             var cost = 0;
 
+            if (IsAfterTheFirstYear)
+            {
+                if (vehicle.DateOfFirstRegistration.Year < 2019)
+                {
+                    if (fuelType.Equals(FuelType.Petrol) || fuelType.Equals(FuelType.Diesel))
+                    {
+                        return 140;
+                    }
+                    else if(fuelType.Equals(FuelType.AlternativeFuel))
+                    {
+                        return 130;
+                    }
+                    else return 0;
+                }
+            }
+
             if (fuelType.Equals(FuelType.Petrol))
             {
                 cost = CalculatePetrolTax(vehicle);
