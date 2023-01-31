@@ -37,6 +37,22 @@ namespace TaxCalculator.Tests
                 }
             }
 
+            if (IsExpensive)
+            {
+                if (vehicle.DateOfFirstRegistration.Year < 2019 && vehicle.ListPrice > 40000)
+                {
+                    if (fuelType.Equals(FuelType.Petrol) || fuelType.Equals(FuelType.Diesel))
+                    {
+                        return 450;
+                    }
+                    else if (fuelType.Equals(FuelType.AlternativeFuel))
+                    {
+                        return 440;
+                    }
+                    else return 310;
+                }
+            }
+
             if (fuelType.Equals(FuelType.Petrol))
             {
                 cost = CalculatePetrolTax(vehicle);
