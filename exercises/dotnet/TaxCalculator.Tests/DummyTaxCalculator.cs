@@ -6,6 +6,15 @@ namespace TaxCalculator.Tests
 {
     public sealed class DummyTaxCalculator : TaxCalculator
     {
+        public bool IsAfterTheFirstYear { get; }
+        public bool IsExpensive { get; }
+
+        public DummyTaxCalculator(bool isAfterTheFirstYear = false, bool isExpensive = false)
+        {
+            IsAfterTheFirstYear = isAfterTheFirstYear;
+            IsExpensive = isExpensive;
+        }
+
         public override int CalculateTax(Vehicle vehicle)
         {
             var emissions = vehicle.Co2Emissions;
