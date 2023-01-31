@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.VisualBasic.FileIO;
+using System;
 using System.Collections.Generic;
 using TaxCalculator;
 
@@ -21,35 +22,15 @@ namespace TaxCalculator.Tests
             var fuelType = vehicle.FuelType;
             var cost = 0;
 
-            if (IsAfterTheFirstYear)
+            if (vehicle.DateOfFirstRegistration.Year < 2019)
             {
-                if (vehicle.DateOfFirstRegistration.Year < 2019)
+                if (IsExpensive && vehicle.ListPrice > 40000)
                 {
-                    if (fuelType.Equals(FuelType.Petrol) || fuelType.Equals(FuelType.Diesel))
-                    {
-                        return 140;
-                    }
-                    else if(fuelType.Equals(FuelType.AlternativeFuel))
-                    {
-                        return 130;
-                    }
-                    else return 0;
+                    return CalculateAfterFirstYear(vehicle, 450, 440, 310);
                 }
-            }
-
-            if (IsExpensive)
-            {
-                if (vehicle.DateOfFirstRegistration.Year < 2019 && vehicle.ListPrice > 40000)
+                else if (IsAfterTheFirstYear)
                 {
-                    if (fuelType.Equals(FuelType.Petrol) || fuelType.Equals(FuelType.Diesel))
-                    {
-                        return 450;
-                    }
-                    else if (fuelType.Equals(FuelType.AlternativeFuel))
-                    {
-                        return 440;
-                    }
-                    else return 310;
+                    return CalculateAfterFirstYear(vehicle, 140, 130, 0);
                 }
             }
 
@@ -68,6 +49,21 @@ namespace TaxCalculator.Tests
                 cost = GetTaxBandFromEmissions(emissions, AlternativeFuelPriceIndex.index);
             }
 
+            return cost;
+        }
+
+        private int CalculateAfterFirstYear(Vehicle vehicle, int petrolDieselPrice, int alternativeFuelPrice, int electricPrice)
+        {
+            var cost = 0;
+            if (vehicle.FuelType.Equals(FuelType.Petrol) || vehicle.FuelType.Equals(FuelType.Diesel))
+            {
+                cost = petrolDieselPrice;
+            }
+            else if (vehicle.FuelType.Equals(FuelType.AlternativeFuel))
+            {
+                cost = alternativeFuelPrice;
+            }
+            else cost = electricPrice;
             return cost;
         }
 
