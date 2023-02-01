@@ -18,104 +18,117 @@ namespace TaxCalculator.Tests
         public void WhenVehicleHas0GramsCo2()
         {
             Vehicle vehicle = new Vehicle(0, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[0];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(0, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas50GramsCo2()
         {
             Vehicle vehicle = new Vehicle(50, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[50];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(25, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas75GramsCo2()
         {
             Vehicle vehicle = new Vehicle(75, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[75];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(110, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas90GramsCo2()
         {
             Vehicle vehicle = new Vehicle(90, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[90];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(130, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas100GramsCo2()
         {
             Vehicle vehicle = new Vehicle(100, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[100];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(150, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas110GramsCo2()
         {
             Vehicle vehicle = new Vehicle(110, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[110];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(170, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas130GramsCo2()
         {
             Vehicle vehicle = new Vehicle(130, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[130];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(210, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas150GramsCo2()
         {
             Vehicle vehicle = new Vehicle(150, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[150];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(530, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas170GramsCo2()
         {
             Vehicle vehicle = new Vehicle(170, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[170];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(855, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas190GramsCo2()
         {
             Vehicle vehicle = new Vehicle(190, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[190];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(1280, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas225GramsCo2()
         {
             Vehicle vehicle = new Vehicle(225, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[225];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(1815, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHas255GramsCo2()
         {
             Vehicle vehicle = new Vehicle(255, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[255];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(2135, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
 
         [Test]
         public void WhenVehicleHasOver255GramsCo2()
         {
             Vehicle vehicle = new Vehicle(256, FuelType.Diesel, FirstOfJanuary2019, 20000);
+            var expectedCost = DieselPriceIndex.index[int.MaxValue];
             int tax = _taxCalculator.CalculateTax(vehicle);
-            Assert.AreEqual(2135, tax);
+            Assert.AreEqual(expectedCost, tax);
         }
     }
 }
