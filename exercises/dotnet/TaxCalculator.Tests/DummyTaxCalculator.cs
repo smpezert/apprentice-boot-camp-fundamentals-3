@@ -36,7 +36,7 @@ namespace TaxCalculator.Tests
 
             if (fuelType.Equals(FuelType.Petrol))
             {
-                cost = CalculatePetrolTax(vehicle);
+                cost = GetTaxBandFromEmissions(emissions, PetrolPriceIndex.index);
             }
 
             else if (vehicle.FuelType.Equals(FuelType.Diesel))
