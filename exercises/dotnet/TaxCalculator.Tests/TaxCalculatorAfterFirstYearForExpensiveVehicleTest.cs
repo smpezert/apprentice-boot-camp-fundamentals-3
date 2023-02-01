@@ -1,11 +1,11 @@
-﻿using System;
-using NUnit.Framework;
+﻿using NUnit.Framework;
+using System;
 
 namespace TaxCalculator.Tests
 {
     class TaxCalculatorAfterFirstYearForExpensiveVehicleTest
     {
-        private static readonly DateTime FirstOfApril2017 = new DateTime(2017,4,1);
+        private static readonly DateTime FirstOfApril2017 = new DateTime(2017, 4, 1);
         private TaxCalculator _taxCalculator;
 
         [SetUp]
