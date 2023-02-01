@@ -7,28 +7,18 @@ namespace TaxCalculator.Tests
 {
     public sealed class DummyTaxCalculator : TaxCalculator
     {
-        public bool IsAfterTheFirstYear { get; }
-        public bool IsExpensive { get; }
-
-        public DummyTaxCalculator(bool isAfterTheFirstYear = false, bool isExpensive = false)
-        {
-            IsAfterTheFirstYear = isAfterTheFirstYear;
-            IsExpensive = isExpensive;
-        }
-
+  
         public override int CalculateTax(Vehicle vehicle)
         {
             
             if (vehicle.DateOfFirstRegistration.Year < 2019)
             {
-                if (IsExpensive && vehicle.ListPrice > 40000)
+                if (vehicle.ListPrice > 40000)
                 {
                     return CalculateAfterFirstYear(vehicle, 450, 440, 310);
                 }
-                else if (IsAfterTheFirstYear)
-                {
-                    return CalculateAfterFirstYear(vehicle, 140, 130, 0);
-                }
+
+                else return CalculateAfterFirstYear(vehicle, 140, 130, 0);
             }
 
             return CalculateFirstYear(vehicle);
