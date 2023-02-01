@@ -18,10 +18,7 @@ namespace TaxCalculator.Tests
 
         public override int CalculateTax(Vehicle vehicle)
         {
-            var emissions = vehicle.Co2Emissions;
-            var fuelType = vehicle.FuelType;
-            var cost = 0;
-
+            
             if (vehicle.DateOfFirstRegistration.Year < 2019)
             {
                 if (IsExpensive && vehicle.ListPrice > 40000)
@@ -34,12 +31,22 @@ namespace TaxCalculator.Tests
                 }
             }
 
+            return CalculateFirstYear(vehicle);
+
+        }
+
+        private int CalculateFirstYear(Vehicle vehicle)
+        {
+            var emissions = vehicle.Co2Emissions;
+            var fuelType = vehicle.FuelType;
+            var cost = 0;
+
             if (fuelType.Equals(FuelType.Petrol))
             {
                 cost = GetTaxBandFromEmissions(emissions, PetrolPriceIndex.index);
             }
 
-            else if (vehicle.FuelType.Equals(FuelType.Diesel))
+            else if (fuelType.Equals(FuelType.Diesel))
             {
                 cost = GetTaxBandFromEmissions(emissions, DieselPriceIndex.index);
             }
@@ -50,6 +57,7 @@ namespace TaxCalculator.Tests
             }
 
             return cost;
+
         }
 
         private int CalculateAfterFirstYear(Vehicle vehicle, int petrolDieselPrice, int alternativeFuelPrice, int electricPrice)
